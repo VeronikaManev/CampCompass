@@ -1,0 +1,17 @@
+@font-face {
+    font-family:'Comfortaa-VariableFont' ;
+    src: url('./fonts/Comfortaa-VariableFont_wght.ttf');
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Comfortaa-VariableFont', Helvetica, sans-serif;
+}
+
+#root{
+    overflow: hidden;
+}

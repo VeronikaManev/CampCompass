@@ -1,0 +1,14 @@
+.homeContainer{
+    width: 100%;
+    height: 840px;
+    position: relative;
+}
+
+.homeContainer .heroImg{
+    height: 1000px;
+    width: 100%;
+    position: relative;
+    object-fit: fill;
+    top: -160px;
+    opacity: 0.8;
+}
