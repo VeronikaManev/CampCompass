@@ -6,7 +6,8 @@ export function Home(params) {
     return (
         <div className='homeContainer'>
             <img className='heroImg' src={heroImg} alt="image-example" />
-            <h1>CampCompass</h1>
+            <h1 className='title'>CampCompass</h1>
+            <p className='subtitle'>Navigate Your Next Adventure</p>
 
         </div>
     )
