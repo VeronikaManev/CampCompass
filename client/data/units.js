@@ -4,7 +4,7 @@ import { get, post, put, del } from "./api.js";
 
 const endpoints = {
     catalog: '/data/characters?sortBy=_createdOn%20desc', //TODO with new jsonstorage?
-    byId: '/data/characters', // ! Without "/"
+    byId: '/data/camps', // ! Without "/"
     like: '/data/useful', //Optionall ==like
 }
 
