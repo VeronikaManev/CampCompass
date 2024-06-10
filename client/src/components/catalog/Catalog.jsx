@@ -1,8 +1,38 @@
+import { useEffect, useState } from 'react';
 import './Catalog.css';
 import heroImg from './image/pexels-alan-caldwell-185375-587976cut.jpg';
+import { getById } from '../../../data/units';
 
 
-export function Catalog(params) {
+export function Catalog(props) {
+
+    const [camp, setCamp] = useState({
+        id: "",
+        title: "",
+        country: "",
+        city: "",
+        open: "",
+        imageUrl: "",
+        summary: ""
+    });
+
+    const id = "3564027f-adcd-4425-b2c0-1253d2386c0c";
+
+    useEffect(() => {
+        const currentCamp = async () => {
+            try {
+                const data = await getById(id);
+
+                if (data) {
+                    setCamp(data);
+                }
+            } catch (error) {
+                alert(error);
+            }
+        }
+        currentCamp();
+    }, [])
+
     return (
         <div className='catalogContainer'>
             <section className="imgContainer">
@@ -16,12 +46,12 @@ export function Catalog(params) {
                 <div className="catalogItem">
 
                     <div className="itemImgContainer">
-                        <img className="itemImg" src="https://kamperen.qodeinteractive.com/wp-content/uploads/2021/06/Single-feat-img-10.jpg" alt="" />
+                        <img className="itemImg" src={camp.imageUrl} alt="" />
                     </div>
 
                     <div className="itemInfoContainer">
-                        <h3>Lorem, ipsum dolor</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In error rerum ipsum nihil cum porro omnis tempora nobis iste sequi.</p>
+                        <h3>{camp.title}</h3>
+                        <p>{camp.summary}</p>
                     </div>
 
                     <div className="itemMoreContainer">
@@ -35,7 +65,7 @@ export function Catalog(params) {
 
                         <div className="moreInfo">
                             <span>More</span>
-                            <button className="moreBtn"><i class="fas fa-arrow-right"></i></button>
+                            <button className="moreBtn"><i className="fas fa-arrow-right"></i></button>
                         </div>
 
                     </div>
