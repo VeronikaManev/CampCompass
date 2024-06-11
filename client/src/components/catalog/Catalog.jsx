@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
 import './Catalog.css';
-import heroImg from './image/pexels-alan-caldwell-185375-587976cut.jpg';
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { getById } from '../../../data/units';
+import heroImg from './image/pexels-alan-caldwell-185375-587976cut.jpg';
 
 
 export function Catalog(props) {
@@ -16,7 +17,7 @@ export function Catalog(props) {
         summary: ""
     });
 
-    const id = "3564027f-adcd-4425-b2c0-1253d2386c0c";
+    const id = "3564027f-adcd-4425-b2c0-1253d2386c0c"; //TODO dynamic id
 
     useEffect(() => {
         const currentCamp = async () => {
@@ -64,7 +65,8 @@ export function Catalog(props) {
                         </div>
 
                         <div className="moreInfo">
-                            <span>More</span>
+                            {/* <span> <Linк to={`/catalog/3564027f-adcd-4425-b2c0-1253d2386c0c`}>View Details</Linк> </span> */}
+                            {/* <span> View Details</span> */}
                             <button className="moreBtn"><i className="fas fa-arrow-right"></i></button>
                         </div>
 

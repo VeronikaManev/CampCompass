@@ -51,6 +51,9 @@
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     font-size: 24px;
     line-height: 1.6;
+    height: 600px;
+   
+
 }
 
 .catalogContainer .itemImgContainer {
@@ -78,6 +81,10 @@
 .catalogContainer .itemInfoContainer h3 {
     font-size: 34px;
     padding: 20px 0 10px 0;
+}
+
+.catalogContainer .itemInfoContainer p{
+    text-overflow: ellipsis;
 }
 
 .catalogContainer .itemMoreContainer {
