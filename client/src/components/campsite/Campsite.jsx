@@ -1,22 +1,15 @@
 import './Campsite.css';
 import { useEffect, useState } from 'react';
 import { getById } from '../../../data/units';
+import { useParams } from 'react-router-dom';
 
 // import heroImg from './image/pexels-alan-caldwell-185375-587976cut.jpg';
 
 export function Campsite(props) {
 
-    const [currentCamp, setCurrentCamp] = useState({
-        id: "",
-        title: "",
-        country: "",
-        city: "",
-        open: "",
-        imageUrl: "",
-        summary: ""
-    });
+    const {id} = useParams();
+    const [currentCamp, setCurrentCamp] = useState({});
 
-    const id = "3564027f-adcd-4425-b2c0-1253d2386c0c"; //TODO dynamic id
 
     useEffect(() => {
         const currentCamp = async () => {
@@ -26,6 +19,7 @@ export function Campsite(props) {
                 if (data) {
                     setCurrentCamp(data);
                 }
+
             } catch (error) {
                 alert(error);
             }
@@ -33,6 +27,8 @@ export function Campsite(props) {
         currentCamp();
     }, []);
 
+
+    
     return (
 
         <div className="campsiteContainer">
