@@ -1669,7 +1669,7 @@
                 country: "Spain",
                 city: "Sant Pere Pescador",
                 open: "March - November",
-                imageUrl: "https://www.ballena-alegre.com/wp-content/uploads/2020/01/camping.jpg",
+                imageUrl: "https://www.camp-lighthouse.hr/wp-content/uploads/2019/12/lighthouse_camping_savudrija_view.jpg",
                 summary: "Set along the beautiful Costa Brava, Camping La Ballena Alegre offers a perfect escape to the Mediterranean coast. The campsite features well-maintained pitches for tents and caravans, modern amenities, and a variety of leisure activities. Guests can enjoy windsurfing, beach volleyball, and yoga classes, or simply relax by our large swimming pool. With its vibrant atmosphere and top-notch facilities, Camping La Ballena Alegre is a favorite among families and adventure seekers alike. Explore the local markets, savor delicious Spanish cuisine, and create unforgettable memories at our coastal haven."
             },
             "d87c9a7b-7c45-4f5e-8e7e-3e67d9a6b621": {
@@ -1678,9 +1678,9 @@
                 country: "France",
                 city: "Argelès-sur-Mer",
                 open: "April - October",
-                imageUrl: "https://www.lescriques.com/wp-content/uploads/2018/03/camping-les-criques.jpg",
+                imageUrl: "https://www.camp-lighthouse.hr/wp-content/uploads/2019/12/lighthouse_camping_parcel.jpg",
                 summary: "Perched on the rocky cliffs of the Mediterranean, Camping Les Criques de Porteils offers stunning sea views and direct access to secluded beaches. The campsite provides a peaceful retreat with modern amenities, including clean sanitary facilities, a heated swimming pool, and a fitness center. Ideal for nature lovers and water sports enthusiasts, guests can enjoy snorkeling, kayaking, and hiking along the scenic coastal trails. With its breathtaking landscape and serene environment, Camping Les Criques de Porteils promises a memorable and rejuvenating stay on the French Riviera."
-            }
+            },
         }
     };
     var rules$1 = {
