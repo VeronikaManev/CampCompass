@@ -8,7 +8,7 @@ import { Login } from './components/login/Login';
 import { Register } from './components/register/Register';
 import { Catalog } from './components/catalog/Catalog';
 import { Best } from './components/best/Best';
-import { Campsite } from './components/camp/Campsite';
+import { Campsite } from './components/campsite/Campsite';
 
 
 
@@ -28,7 +28,7 @@ function App() {
 
 
 
-        <Route path='/catalog/3564027f-adcd-4425-b2c0-1253d2386c0c' element={<Campsite />} /> /
+        <Route path='/details/:id' element={<Campsite />} /> /
       
 
         
