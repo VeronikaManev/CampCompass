@@ -1,22 +1,32 @@
+import { Link, useNavigate } from 'react-router-dom';
+import { login } from '../../../data/auth';
+import { useForm } from '../../hooks/useForm';
 import './Login.css';
 import heroImg from './image/pexels-cliford-mervil-988071-2398220.jpg';
-import { Link } from 'react-router-dom';
 
 export function Login(params) {
+    const navigate = useNavigate();
+const {values, changeHandler} = useForm({email:'', password:''});
+
+async function onSubmit(e) {
+    e.preventDefault();
+    await login(values.email, values.password);
+    navigate('/');
+}
     return (
         <div className='loginContainer'>
             <img className='heroImg' src={heroImg} alt="image-example" />
 
             <div className='container'>
 
-                <form className='form' action="">
+                <form onSubmit={onSubmit} className='form' action="">
                     <label htmlFor="emial"><i className="fas fa-user"></i></label>
-                    <input type="email" name='email' placeholder='E-mail' />
+                    <input onChange={changeHandler} type="email" name='email' placeholder='E-mail' value={values.email} />
 
                     <label htmlFor="password"><i className="fas fa-lock"></i></label>
-                    <input type="password" name='password' placeholder='Password' />
+                    <input onChange={changeHandler} type="password" name='password' placeholder='Password' value={values.password}/>
 
-                    <button className="loginBtn"><i class="fas fa-arrow-right"></i></button>
+                    <button className="loginBtn"><i className="fas fa-arrow-right"></i></button>
                 </form>
 
                 <div className='newUserContainer'>
