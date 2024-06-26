@@ -1,7 +1,7 @@
-import './Campsite.css';
+import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getById } from '../../../data/units';
-import { useParams } from 'react-router-dom';
+import './Campsite.css';
 
 // import heroImg from './image/pexels-alan-caldwell-185375-587976cut.jpg';
 
