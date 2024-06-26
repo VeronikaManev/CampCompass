@@ -1,25 +1,46 @@
+import { Link, useNavigate } from 'react-router-dom';
+import { useForm } from '../../hooks/useForm';
+import { register } from '../../../data/auth';
 import './Register.css';
 import heroImg from './image/kevin-ianeselli-ebnlHkqfUHY-unsplash.jpg';
-import { Link } from 'react-router-dom';
 
 export function Register(params) {
+
+    const navigate = useNavigate();
+
+    const { values, changeHandler } = useForm({ email: '', password: '', repeat:''});
+
+    async function onSubmit(e) {
+        e.preventDefault();
+
+        if (values.email == '' || values.password == '') {
+            return alert('All fields are requires!');
+        }
+
+        if (values.password  != values.repeat) {
+            return alert('Passwords don\'t match!');
+        }
+
+        await register(values.email, values.password, values.repeat);
+        navigate('/');
+    }
     return (
         <div className='registerContainer'>
             <img className='heroImg' src={heroImg} alt="image-example" />
 
             <div className='container'>
 
-                <form className='form' action="">
+                <form onSubmit={onSubmit} className='form' action="">
                     <label htmlFor="emial"><i className="fas fa-user"></i></label>
-                    <input type="email" name='email' placeholder='E-mail' />
+                    <input onChange={changeHandler} type="email" name='email' placeholder='E-mail' value={values.email} />
 
                     <label htmlFor="password"><i className="fas fa-lock"></i></label>
-                    <input type="password" name='password' placeholder='Password' />
+                    <input onChange={changeHandler} type="password" name='password' placeholder='Password' value={values.password} />
 
-                    <label htmlFor="repeat"><i class="fas fa-redo-alt"></i></label>
-                    <input type="password" name='repeat' placeholder='Repeat password' />
+                    <label htmlFor="repeat"><i className="fas fa-redo-alt"></i></label>
+                    <input onChange={changeHandler} type="password" name='repeat' placeholder='Repeat password' value={values.repeat}/>
 
-                    <button className="loginBtn"><i class="fas fa-arrow-right"></i></button>
+                    <button className="loginBtn"><i className="fas fa-arrow-right"></i></button>
                 </form>
 
                 <div className='newUserContainer'>
