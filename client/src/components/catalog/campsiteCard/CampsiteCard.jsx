@@ -28,9 +28,10 @@ export function CampsiteCard(props) {
                 </div>
 
                 <div className="moreInfo">
-                    
-                    <span><Link to={`/details/${campsite.id}`}>More</Link></span>
-                    <button className="moreBtn"><i className="fas fa-arrow-right"></i></button>
+                    <Link to={`/details/${campsite.id}`}>
+                        <span>More</span>
+                        <button className="moreBtn"><i className="fas fa-arrow-right"></i></button>
+                    </Link>
                 </div>
 
             </div>
