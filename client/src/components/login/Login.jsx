@@ -6,13 +6,14 @@ import heroImg from './image/pexels-cliford-mervil-988071-2398220.jpg';
 
 export function Login(params) {
     const navigate = useNavigate();
-const {values, changeHandler} = useForm({email:'', password:''});
+    
+    const { values, changeHandler } = useForm({ email: '', password: '' });
 
-async function onSubmit(e) {
-    e.preventDefault();
-    await login(values.email, values.password);
-    navigate('/');
-}
+    async function onSubmit(e) {
+        e.preventDefault();
+        await login(values.email, values.password);
+        navigate('/');
+    }
     return (
         <div className='loginContainer'>
             <img className='heroImg' src={heroImg} alt="image-example" />
@@ -24,7 +25,7 @@ async function onSubmit(e) {
                     <input onChange={changeHandler} type="email" name='email' placeholder='E-mail' value={values.email} />
 
                     <label htmlFor="password"><i className="fas fa-lock"></i></label>
-                    <input onChange={changeHandler} type="password" name='password' placeholder='Password' value={values.password}/>
+                    <input onChange={changeHandler} type="password" name='password' placeholder='Password' value={values.password} />
 
                     <button className="loginBtn"><i className="fas fa-arrow-right"></i></button>
                 </form>
