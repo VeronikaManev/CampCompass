@@ -12,8 +12,6 @@ export function Header(params) {
                     <li> <Link to='/login' className="list-item">Login</Link> </li>
                     <li> <Link to='/register' className="list-item">Register</Link> </li>
                     <li> <Link to='/catalog' className="list-item">Catalog</Link> </li>
-                    <li> <Link to='/best' className="list-item">Best</Link> </li>
-
                 </ul>
             </nav>
         </header>
