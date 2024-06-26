@@ -19,7 +19,6 @@ export function Catalog(props) {
         allCampsites();
 
     }, [])
-    console.log(campsites);
 
     return (
         <div className='catalogContainer'>
