@@ -1,0 +1,61 @@
+.createContainer{
+    width: 100%;
+    height: 960px;
+    position: relative;
+}
+
+.createContainer .heroImg{
+    height: auto;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+    top: -120px;
+    opacity: 0.8;
+}
+
+.createContainer .container{
+    position: absolute;
+    top: 200px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.createContainer .form{
+    display: flex;
+    align-items: center;
+}
+
+.createContainer .form label{
+    font-size: 40px;
+}
+
+.createContainer .form input{
+    height: 50px;
+    width: 400px;
+    background-color: #2179c500;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    margin: 0 60px 0 20px;
+}
+
+.createContainer .form input::placeholder {
+    color: rgb(4, 4, 4);
+}
+
+.createContainer .form .loginBtn{
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: #2179c500;
+}

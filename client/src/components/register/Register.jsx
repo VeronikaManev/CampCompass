@@ -31,7 +31,7 @@ export function Register(params) {
             <div className='container'>
 
                 <form onSubmit={onSubmit} className='form' action="">
-                    <label htmlFor="emial"><i className="fas fa-user"></i></label>
+                    <label htmlFor="email"><i className="fas fa-user"></i></label>
                     <input onChange={changeHandler} type="email" name='email' placeholder='E-mail' value={values.email} />
 
                     <label htmlFor="password"><i className="fas fa-lock"></i></label>
