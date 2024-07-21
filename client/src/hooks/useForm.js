@@ -7,5 +7,8 @@ export function useForm(initialValues) {
         setValues((state) => ({ ...state, [e.target.name]: e.target.value }));
     }
 
-    return { values, changeHandler };
-}
+    return {
+        values,
+        changeHandler,
+    };
+} 
