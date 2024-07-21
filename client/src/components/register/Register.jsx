@@ -8,7 +8,11 @@ export function Register(params) {
 
     const navigate = useNavigate();
 
-    const { values, changeHandler } = useForm({ email: '', password: '', repeat:''});
+    const { values, changeHandler } = useForm({
+        email: '',
+        password: '',
+        repeat: ''
+    });
 
     async function onSubmit(e) {
         e.preventDefault();
@@ -17,7 +21,7 @@ export function Register(params) {
             return alert('All fields are requires!');
         }
 
-        if (values.password  != values.repeat) {
+        if (values.password != values.repeat) {
             return alert('Passwords don\'t match!');
         }
 
@@ -38,7 +42,7 @@ export function Register(params) {
                     <input onChange={changeHandler} type="password" name='password' placeholder='Password' value={values.password} />
 
                     <label htmlFor="repeat"><i className="fas fa-redo-alt"></i></label>
-                    <input onChange={changeHandler} type="password" name='repeat' placeholder='Repeat password' value={values.repeat}/>
+                    <input onChange={changeHandler} type="password" name='repeat' placeholder='Repeat password' value={values.repeat} />
 
                     <button className="registerBtn"><i className="fas fa-arrow-right"></i></button>
                 </form>
