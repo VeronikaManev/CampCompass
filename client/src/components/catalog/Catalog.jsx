@@ -30,7 +30,7 @@ export function Catalog(props) {
 
             <section className='catalog'>
                 {campsites.map((x) => (
-                    <CampsiteCard key={x.id} data={x} />
+                    <CampsiteCard key={x._id} data={x} />
                 ))}
             </section>
         </div>
