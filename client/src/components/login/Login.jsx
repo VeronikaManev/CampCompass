@@ -10,9 +10,8 @@ import { Context } from '../../context/context';
 export function Login() {
 
     const navigate = useNavigate();
-    const {setContextData} = useContext(Context);
-    
-    // const {loginSubmitHandler} = useContext(Context);
+
+    const { setContextData } = useContext(Context);
 
     const { values, changeHandler } = useForm({
         email: '',
@@ -21,14 +20,12 @@ export function Login() {
 
     async function onSubmit(e) {
         e.preventDefault();
-    const userData = await login(values.email, values.password);
-    setContextData((state)=>({...state, userData}))
+        const userData = await login(values.email, values.password);
+        setContextData((state) => ({ ...state, userData }))
 
-
-        // loginSubmitHandler(values)
         navigate('/');
     }
-    
+
     return (
         <div className='loginContainer'>
             <img className='heroImg' src={heroImg} alt="image-example" />
