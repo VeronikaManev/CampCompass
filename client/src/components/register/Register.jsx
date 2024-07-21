@@ -3,10 +3,15 @@ import { useForm } from '../../hooks/useForm';
 import { register } from '../../../data/auth';
 import './Register.css';
 import heroImg from './image/kevin-ianeselli-ebnlHkqfUHY-unsplash.jpg';
+import { Context } from '../../context/context';
+import { useContext } from 'react';
 
-export function Register(params) {
+export function Register() {
 
     const navigate = useNavigate();
+
+    const { setContextData } = useContext(Context);
+
 
     const { values, changeHandler } = useForm({
         email: '',
@@ -16,6 +21,9 @@ export function Register(params) {
 
     async function onSubmit(e) {
         e.preventDefault();
+        const userData = await register(values.email, values.password);
+        setContextData((state) => ({...state, userData}))
+
 
         if (values.email == '' || values.password == '') {
             return alert('All fields are requires!');
@@ -25,7 +33,6 @@ export function Register(params) {
             return alert('Passwords don\'t match!');
         }
 
-        await register(values.email, values.password, values.repeat);
         navigate('/');
     }
     return (
