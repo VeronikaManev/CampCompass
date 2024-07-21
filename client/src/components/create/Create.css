@@ -1,40 +1,44 @@
-.createContainer{
+.createContainer {
     width: 100%;
     height: 960px;
     position: relative;
 }
 
-.createContainer .heroImg{
+/* .createContainer .heroImg {
     height: auto;
     width: 100%;
     position: relative;
     object-fit: cover;
     top: -120px;
     opacity: 0.8;
-}
+} */
 
-.createContainer .container{
+.createContainer .container {
     position: absolute;
-    top: 200px;
+    top: 300px;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     flex-direction: column;
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
     justify-content: center;
     align-items: center;
 }
 
-.createContainer .form{
+.createContainer .form {
     display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    gap: 30px;
     align-items: center;
 }
 
-.createContainer .form label{
+.createContainer .form label {
     font-size: 40px;
 }
 
-.createContainer .form input{
+.createContainer .form input {
     height: 50px;
     width: 400px;
     background-color: #2179c500;
@@ -51,11 +55,43 @@
     color: rgb(4, 4, 4);
 }
 
-.createContainer .form .loginBtn{
+.createContainer .form .fielset {
+    border: 1px solid black;
+}
+
+.createContainer .form .fielset legend {
+    font-size: 34px;
+}
+
+.createContainer .form .fielset div {
+    margin: 10px 100px;
+}
+
+.createContainer .form .fielset input {
+    margin: 20px;
+    width: 50px;
+}
+
+.createContainer .form .fielset i {
+    font-size: 34px;
+    margin-right: 20px;
+}
+
+.createContainer .form .createBtn {
     border: 3px solid black;
     width: 80px;
     height: 80px;
     border-radius: 50%;
     font-size: 30px;
+    background-color: #2179c500;
+}
+
+.createContainer .form .resetBtn {
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bolder;
     background-color: #2179c500;
 }
