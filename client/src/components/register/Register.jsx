@@ -40,12 +40,12 @@ export function Register(params) {
                     <label htmlFor="repeat"><i className="fas fa-redo-alt"></i></label>
                     <input onChange={changeHandler} type="password" name='repeat' placeholder='Repeat password' value={values.repeat}/>
 
-                    <button className="loginBtn"><i className="fas fa-arrow-right"></i></button>
+                    <button className="registerBtn"><i className="fas fa-arrow-right"></i></button>
                 </form>
 
                 <div className='newUserContainer'>
                     <p>Already have an account?</p>
-                    <Link to='/login' className="goToRegister">Sign in</Link>
+                    <Link to='/login' className="goToLogin">Sign in</Link>
                 </div>
             </div>
         </div>
