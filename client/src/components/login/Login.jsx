@@ -3,17 +3,32 @@ import { login } from '../../../data/auth';
 import { useForm } from '../../hooks/useForm';
 import './Login.css';
 import heroImg from './image/pexels-cliford-mervil-988071-2398220.jpg';
+import { useContext } from 'react';
+import { Context } from '../../context/context';
 
-export function Login(params) {
+
+export function Login() {
+
     const navigate = useNavigate();
+    const {setContextData} = useContext(Context);
     
-    const { values, changeHandler } = useForm({ email: '', password: '' });
+    // const {loginSubmitHandler} = useContext(Context);
+
+    const { values, changeHandler } = useForm({
+        email: '',
+        password: ''
+    });
 
     async function onSubmit(e) {
         e.preventDefault();
-        await login(values.email, values.password);
+    const userData = await login(values.email, values.password);
+    setContextData((state)=>({...state, userData}))
+
+
+        // loginSubmitHandler(values)
         navigate('/');
     }
+    
     return (
         <div className='loginContainer'>
             <img className='heroImg' src={heroImg} alt="image-example" />
