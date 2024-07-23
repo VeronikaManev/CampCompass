@@ -2,11 +2,13 @@
 
 
 footer {
-    position: relative;
+    position:relative;
+    margin: 0 auto;
     color: black;
     text-align: center;
     font-size: 24px;
     font-weight: 800;
+    z-index: 10;
 }
 
 .footer .container{
