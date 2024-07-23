@@ -18,6 +18,7 @@ export function Header(params) {
                     {!contextData.userData && <li> <Link to='/register' className="list-item">Register</Link> </li>}
                     <li> <Link to='/catalog' className="list-item">Catalog</Link> </li>
                     {contextData.userData && <li> <Link to='/create' className="list-item">Create</Link> </li>}
+                    {contextData.userData && <li> <Link to='/logout' className="list-item">Logout</Link> </li>}
 
                 </ul>
             </nav>
