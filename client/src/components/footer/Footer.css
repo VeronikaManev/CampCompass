@@ -9,6 +9,7 @@ footer {
     font-size: 24px;
     font-weight: 800;
     z-index: 10;
+    border-top: 1px solid black;
 }
 
 .footer .container{
@@ -18,7 +19,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid black;
 }
 
 .footer .footer-links {
