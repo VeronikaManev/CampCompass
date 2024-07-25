@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import './Header.css';
 import logoImg from './image/logo-transparent-png.png';
 import { Link } from 'react-router-dom';
-import { Context } from '../../context/context';
+import { Context } from '../../context/Context';
 
 
 export function Header(params) {

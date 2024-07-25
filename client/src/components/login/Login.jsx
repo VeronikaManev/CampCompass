@@ -2,8 +2,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../../data/auth';
 import { useForm } from '../../hooks/useForm';
 import './Login.css';
+import heroImg from './image/pexels-cliford-mervil-988071-2398220.jpg';
 import { useContext } from 'react';
-import { Context } from '../../context/context';
+import { Context } from '../../context/Context';
 
 
 export function Login() {
@@ -27,6 +28,7 @@ export function Login() {
 
     return (
         <div className='loginContainer'>
+            <img className='heroImg' src={heroImg} alt="image-example" />
 
             <div className='container'>
 

@@ -14,17 +14,11 @@ import { Register } from './components/register/Register';
 import { Catalog } from './components/catalog/Catalog';
 import { Campsite } from './components/campsite/Campsite';
 import { Create } from './components/create/Create';
-import { ContextProvider } from './context/context';
+import { ContextProvider } from './context/Context';
+import { Logout } from './components/logout/Logout';
 
 
 function App() {
-
-  // const [auth, setAuth] = useState({});
-
-  // const loginSubmitHandler = async (values) => {
-  //   const user = await login(values.email, values.password);
-  //   setAuth(user);
-  // }
 
   return (
 
@@ -40,6 +34,7 @@ function App() {
 
 
         <Route path='/details/:id' element={<Campsite />} /> /
+        <Route path='/logout' element={<Logout />} />
       </Routes>
       <Footer></Footer>
     </ContextProvider>

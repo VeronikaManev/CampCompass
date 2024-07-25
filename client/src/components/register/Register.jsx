@@ -3,7 +3,7 @@ import { useForm } from '../../hooks/useForm';
 import { register } from '../../../data/auth';
 import './Register.css';
 import heroImg from './image/kevin-ianeselli-ebnlHkqfUHY-unsplash.jpg';
-import { Context } from '../../context/context';
+import { Context } from '../../context/Context';
 import { useContext } from 'react';
 
 export function Register() {
@@ -23,7 +23,6 @@ export function Register() {
         e.preventDefault();
         const userData = await register(values.email, values.password);
         setContextData((state) => ({...state, userData}))
-
 
         if (values.email == '' || values.password == '') {
             return alert('All fields are requires!');
