@@ -1,7 +1,7 @@
 .loginContainer{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(1080px - 88px);
     background-image: url('./image/pexels-cliford-mervil-988071-2398220.jpg');
     background-size: cover; 
     background-position: center; 
