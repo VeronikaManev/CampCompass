@@ -2,7 +2,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { register } from '../../../data/auth';
 import './Register.css';
-import heroImg from './image/kevin-ianeselli-ebnlHkqfUHY-unsplash.jpg';
 import { Context } from '../../context/Context';
 import { useContext } from 'react';
 
@@ -36,7 +35,6 @@ export function Register() {
     }
     return (
         <div className='registerContainer'>
-            <img className='heroImg' src={heroImg} alt="image-example" />
 
             <div className='container'>
 

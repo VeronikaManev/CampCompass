@@ -1,16 +1,11 @@
 .registerContainer{
     width: 100%;
-    height: 960px;
     position: relative;
-}
-
-.registerContainer .heroImg{
-    height: auto;
-    width: 100%;
-    position: relative;
-    object-fit: cover;
-    top: -120px;
-    opacity: 0.8;
+    height: calc(1080px - 88px);
+    background-image: url('./image/kevin-ianeselli-ebnlHkqfUHY-unsplash.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
 .registerContainer .container{
