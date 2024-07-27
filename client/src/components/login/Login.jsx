@@ -10,7 +10,7 @@ export function Login() {
 
     const navigate = useNavigate();
 
-    const { setContextData } = useContext(Context);
+    const { setContextAuthData } = useContext(Context);
 
     const { values, changeHandler } = useForm({
         email: '',
@@ -20,7 +20,7 @@ export function Login() {
     async function onSubmit(e) {
         e.preventDefault();
         const userData = await login(values.email, values.password);
-        setContextData((state) => ({ ...state, userData }))
+        setContextAuthData(userData)
 
         navigate('/');
     }

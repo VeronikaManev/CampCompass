@@ -9,8 +9,7 @@ export function Register() {
 
     const navigate = useNavigate();
 
-    const { setContextData } = useContext(Context);
-
+    const { setContextAuthData } = useContext(Context);
 
     const { values, changeHandler } = useForm({
         email: '',
@@ -21,7 +20,7 @@ export function Register() {
     async function onSubmit(e) {
         e.preventDefault();
         const userData = await register(values.email, values.password);
-        setContextData((state) => ({...state, userData}))
+        setContextAuthData(userData);
 
         if (values.email == '' || values.password == '') {
             return alert('All fields are requires!');
@@ -33,6 +32,7 @@ export function Register() {
 
         navigate('/');
     }
+
     return (
         <div className='registerContainer'>
 

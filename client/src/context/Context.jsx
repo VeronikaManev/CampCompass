@@ -6,10 +6,18 @@ export const Context = createContext();
 Context.displayName = 'Context';
 
 export const ContextProvider = ({ children }) => {
-    const [contextData, setContextData] = useState({});
+    const [authData, setAuthData] = useState();
+
+    function setContextAuthData(data) {
+        setAuthData({...data});
+    }
+
+    function clearContextAuthData() {
+        setAuthData();
+    }
 
     return (
-        <Context.Provider value={{ contextData, setContextData }}>
+        <Context.Provider value={{ authData, setContextAuthData, clearContextAuthData}}>
             {children}
         </Context.Provider>
     );

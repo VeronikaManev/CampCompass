@@ -5,13 +5,13 @@ import { Context } from "../../context/Context";
 
 export function Logout() {
     const navigate = useNavigate();
-    const { setContextData } = useContext(Context);
+    const { clearContextAuthData } = useContext(Context);
 
 
     useEffect(() => {
 
         try {
-            setContextData((state) => ({ ...state, userData: undefined }))
+            clearContextAuthData();
             logout();
             navigate('/');
 
