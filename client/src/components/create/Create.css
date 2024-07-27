@@ -2,6 +2,7 @@
     width: 100%;
     height: 960px;
     position: relative;
+    background-color: chocolate;
 }
 
 /* .createContainer .heroImg {
@@ -14,21 +15,19 @@
 } */
 
 .createContainer .container {
-    position: absolute;
+    /* position: absolute; */
     top: 300px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    flex-direction: column;
     width: 100%;
     /* height: 300px; */
+    align-content: center;
     justify-content: center;
     align-items: center;
 }
 
 .createContainer .form {
     display: flex;
-    width: 70%;
+    width: 50%;
     flex-wrap: wrap;
     gap: 30px;
     align-items: center;
