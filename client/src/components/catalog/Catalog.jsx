@@ -12,7 +12,6 @@ export function Catalog() {
     useEffect(() => {
         const allCampsites = async () => {
 
-            // const data = await getAllUnits();
             setCampsites(Object.values(await getAllUnits()))
         }
 
