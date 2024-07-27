@@ -45,7 +45,7 @@ export function Create(params) {
     async function createCampSubmitHandler(e) {
         e.preventDefault();
 
-        
+
         await createUnit(formValues);
 
         // if (values.email == '' || values.password == '') {
@@ -71,20 +71,23 @@ export function Create(params) {
             <div className='container'>
 
                 <form onSubmit={createCampSubmitHandler} className='form' action="">
-                    <label htmlFor="title"><i className="fas fa-user"></i></label>
-                    <input onChange={changeHandler} type="text" name='title' placeholder='Campsite Name' value={formValues.title} />
 
-                    <label htmlFor="country"><i className="fas fa-globe-americas"></i></label>
-                    <input onChange={changeHandler} type="text" name='country' placeholder='Country' value={formValues.country} />
+                    <div className='info'>
+                        <label htmlFor="title"><i className="fas fa-user"></i></label>
+                        <input onChange={changeHandler} type="text" name='title' placeholder='Campsite Name' value={formValues.title} />
 
-                    <label htmlFor="city"><i className="fas fa-city"></i></label>
-                    <input onChange={changeHandler} type="text" name='city' placeholder='City' value={formValues.city} />
+                        <label htmlFor="country"><i className="fas fa-globe-americas"></i></label>
+                        <input onChange={changeHandler} type="text" name='country' placeholder='Country' value={formValues.country} />
 
-                    <label htmlFor="imageUrl"><i className="fas fa-calendar-alt"></i></label>
-                    <input onChange={changeHandler} type="text" name='imageUrl' placeholder='Photo' value={formValues.imageUrl} />
+                        <label htmlFor="city"><i className="fas fa-city"></i></label>
+                        <input onChange={changeHandler} type="text" name='city' placeholder='City' value={formValues.city} />
 
-                    <label htmlFor="info"><i className="fas fa-info"></i></label>
-                    <input onChange={changeHandler} type="text" name='info' placeholder='Description' value={formValues.info} />
+                        <label htmlFor="imageUrl"><i className="fas fa-calendar-alt"></i></label>
+                        <input onChange={changeHandler} type="text" name='imageUrl' placeholder='Photo' value={formValues.imageUrl} />
+
+                        <label htmlFor="info"><i className="fas fa-info"></i></label>
+                        <input onChange={changeHandler} type="text" name='info' placeholder='Description' value={formValues.info} />
+                    </div>
 
                     <fieldset className="fielset">
                         <legend>Mark if available:</legend>

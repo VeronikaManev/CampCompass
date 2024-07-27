@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     height: calc(1080px - 88px - 100px);
-    background-image: url('./images/Campingplatz-Walchensee-Bayern_320124915.jpg');
+    background-image: url('./images/shutterstock_625918454.0.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -10,7 +10,7 @@
 
 .createContainer .container {
     position: absolute;
-    top: 200px;
+    top: 300px;
     display: flex;
     width: 100%;
     height: 300px;
@@ -19,16 +19,27 @@
     align-items: center;
 }
 
+.createContainer .info{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .createContainer .form {
     display: flex;
-    width: 50%;
+    width: 80%;
     flex-wrap: wrap;
     gap: 30px;
+    align-content: center;
+    justify-content: center;
     align-items: center;
 }
 
 .createContainer .form label {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .createContainer .form input {
@@ -36,7 +47,7 @@
     width: 400px;
     background-color: #2179c500;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 800;
     border: none;
     border-bottom: 2px solid black;
@@ -50,24 +61,25 @@
 
 .createContainer .form .fielset {
     border: 1px solid black;
+    display: flex;
 }
 
 .createContainer .form .fielset legend {
-    font-size: 34px;
+    font-size: 24px;
 }
 
 .createContainer .form .fielset div {
-    margin: 10px 100px;
+    margin: 5px 20px;
 }
 
 .createContainer .form .fielset input {
-    margin: 20px;
+    margin: 10px;
     width: 50px;
 }
 
 .createContainer .form .fielset i {
     font-size: 34px;
-    margin-right: 20px;
+    margin: 0 30px;
 }
 
 .createContainer .form .createBtn {
