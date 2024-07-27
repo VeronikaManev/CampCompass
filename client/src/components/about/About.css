@@ -1,6 +1,6 @@
 .aboutContainer{
     width: 100%;
-    height: calc(1080px - 88px);
+    height: calc(1080px - 88px - 100px);
     background-image: url('./image/jamie-street-_94HLr_QXo8-unsplash.jpg');
     background-size: cover; 
     background-position: center; 

@@ -1,25 +1,19 @@
 .createContainer {
-    width: 100%;
-    height: 960px;
     position: relative;
-    background-color: chocolate;
+    width: 100%;
+    height: calc(1080px - 88px - 100px);
+    background-image: url('./images/Campingplatz-Walchensee-Bayern_320124915.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
-/* .createContainer .heroImg {
-    height: auto;
-    width: 100%;
-    position: relative;
-    object-fit: cover;
-    top: -120px;
-    opacity: 0.8;
-} */
-
 .createContainer .container {
-    /* position: absolute; */
-    top: 300px;
+    position: absolute;
+    top: 200px;
     display: flex;
     width: 100%;
-    /* height: 300px; */
+    height: 300px;
     align-content: center;
     justify-content: center;
     align-items: center;

@@ -1,6 +1,6 @@
 .homeContainer{
     width: 100%;
-    height: calc(1080px - 88px);
+    height: calc(1080px - 88px - 100px);
     background-image: url('./image/TCS-Camping-Sempach----Luftaufnahme-des-Campingplatzes-am-Wasser-2e2bc516-67d0-463d-82e7-48a22fcb0c6b.jpg');
     background-size: cover; 
     background-position: center; 
