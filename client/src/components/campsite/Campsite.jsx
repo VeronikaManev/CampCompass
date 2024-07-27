@@ -1,6 +1,6 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
-import { getById } from '../../../data/units';
+import { deleteUnit, getById } from '../../../data/units';
 import './Campsite.css';
 import { AddComment } from './addComment/AddComment';
 import { Context } from '../../context/Context';
@@ -9,6 +9,9 @@ import { AllComments } from './allComments/AllComments';
 // import heroImg from './image/pexels-alan-caldwell-185375-587976cut.jpg';
 
 export function Campsite(props) {
+
+    const navigate = useNavigate();
+
     const { authData } = useContext(Context);
 
     const { id } = useParams();
@@ -25,7 +28,10 @@ export function Campsite(props) {
         setComments(allComments => [...allComments, comment]);
     }
 
-
+    async function onDeleteHandler() {
+        await deleteUnit(currentCamp._id);
+        navigate('/catalog');
+    }
 
     useEffect(() => {
         const currentCamp = async () => {
@@ -43,7 +49,7 @@ export function Campsite(props) {
         currentCamp();
     }, []);
 
-
+    const isOwner = authData?._id === currentCamp._ownerId;
 
     return (
 
@@ -71,6 +77,12 @@ export function Campsite(props) {
             <article className="article">
                 <p>{currentCamp.summary}</p>
             </article>
+
+
+            {authData && isOwner && <div className="corrections">
+                <button className='editBtn'>Edit</button>
+                <button onClick={onDeleteHandler} className='deleteBtn'>Delete</button>
+            </div>}
 
             <div className="comments">
 
