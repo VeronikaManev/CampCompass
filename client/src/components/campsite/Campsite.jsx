@@ -4,15 +4,27 @@ import { getById } from '../../../data/units';
 import './Campsite.css';
 import { AddComment } from './addComment/AddComment';
 import { Context } from '../../context/Context';
+import { AllComments } from './allComments/AllComments';
 
 // import heroImg from './image/pexels-alan-caldwell-185375-587976cut.jpg';
 
 export function Campsite(props) {
-    const { authData } = useContext (Context);
-
+    const { authData } = useContext(Context);
 
     const { id } = useParams();
+
     const [currentCamp, setCurrentCamp] = useState({});
+
+    const [comments, setComments] = useState([]);
+
+    function setCommentsData(data) {
+        setComments(data);
+    }
+
+    function setNewComment(comment) {
+        setComments(allComments => [...allComments, comment]);
+    }
+
 
 
     useEffect(() => {
@@ -60,12 +72,20 @@ export function Campsite(props) {
                 <p>{currentCamp.summary}</p>
             </article>
 
-            <div className="addCommentContainer">
-                {authData && <AddComment></AddComment>}
+            <div className="comments">
+
+                <div className="allComments">
+                    <AllComments comments={comments} setCommentsData={setCommentsData} />
+                </div>
+
+                <div className="addCommentContainer">
+                    {authData && <AddComment setNewComment={setNewComment} />}
+
+                </div>
 
             </div>
 
-        </div>
+        </div >
     )
 }
 

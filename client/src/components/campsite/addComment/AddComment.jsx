@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { createComment, createComments } from "../../../../data/units";
+import { createComment } from "../../../../data/units";
 import { useForm } from "../../../hooks/useForm";
 import { Context } from "../../../context/Context";
 import { useParams } from "react-router-dom";
 
-export function AddComment(params) {
+export function AddComment({setNewComment}) {
 
     const { id } = useParams();
 
@@ -23,8 +23,10 @@ export function AddComment(params) {
                 throw new Error('Please add a comment!');
             }
 
-            await createComment(id, authData.email, values.commentText);
+            const result = await createComment(id, authData.email, values.commentText);
 
+            setNewComment(result);
+            
             clearFormData();
 
         } catch (error) {

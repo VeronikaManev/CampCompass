@@ -48,8 +48,8 @@ export async function searchUnits(query) {
 
 //Option comments
 
-export async function getAllComments(data) {
-    return get(endpoints.comments, data);
+export async function getAllComments(campId) {
+    return get(`/data/comments?where=campId%3D%22${campId}%22`);
 }
 
 export async function createComment(campId, email, text) {
