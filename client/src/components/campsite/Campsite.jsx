@@ -1,13 +1,17 @@
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { getById } from '../../../data/units';
 import './Campsite.css';
+import { AddComment } from './addComment/AddComment';
+import { Context } from '../../context/Context';
 
 // import heroImg from './image/pexels-alan-caldwell-185375-587976cut.jpg';
 
 export function Campsite(props) {
+    const { authData } = useContext (Context);
 
-    const {id} = useParams();
+
+    const { id } = useParams();
     const [currentCamp, setCurrentCamp] = useState({});
 
 
@@ -28,7 +32,7 @@ export function Campsite(props) {
     }, []);
 
 
-    
+
     return (
 
         <div className="campsiteContainer">
@@ -56,6 +60,13 @@ export function Campsite(props) {
                 <p>{currentCamp.summary}</p>
             </article>
 
+            <div className="addCommentContainer">
+                {authData && <AddComment></AddComment>}
+
+            </div>
+
         </div>
     )
 }
+
+// Да се добави визуализирането на коментарите

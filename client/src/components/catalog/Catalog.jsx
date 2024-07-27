@@ -5,7 +5,7 @@ import heroImg from './image/pexels-alan-caldwell-185375-587976cut.jpg';
 import { CampsiteCard } from './campsiteCard/CampsiteCard';
 
 
-export function Catalog(props) {
+export function Catalog() {
 
     const [campsites, setCampsites] = useState([]);
 

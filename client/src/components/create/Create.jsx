@@ -45,10 +45,8 @@ export function Create(params) {
     async function createCampSubmitHandler(e) {
         e.preventDefault();
 
-        const campData = Object.fromEntries(new FormData(e.currentTarget));
-
         
-        await createUnit(campData);
+        await createUnit(formValues);
 
         // if (values.email == '' || values.password == '') {
         //     return alert('All fields are requires!');
@@ -86,9 +84,9 @@ export function Create(params) {
                     <input onChange={changeHandler} type="text" name='imageUrl' placeholder='Photo' value={formValues.imageUrl} />
 
                     <label htmlFor="info"><i className="fas fa-info"></i></label>
-                    <input onChange={changeHandler} type="text" name='info' placeholder='Information' value={formValues.info} />
+                    <input onChange={changeHandler} type="text" name='info' placeholder='Description' value={formValues.info} />
 
-                    <fieldset className='fielset'>
+                    <fieldset className="fielset">
                         <legend>Mark if available:</legend>
 
                         <div>
