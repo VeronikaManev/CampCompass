@@ -28,6 +28,9 @@ export async function deleteUnit(id) {
     return del(endpoints.byId + '/' + id);
 }
 
+export async function getMyCamps(ownerId) {
+    return get(`/data/camps?where=_ownerId%3D%22${ownerId}%22`);
+}
 //Option Like
 export async function likeUnit(data) {
     return post(endpoints.like, data);

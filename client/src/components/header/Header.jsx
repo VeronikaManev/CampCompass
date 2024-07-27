@@ -18,6 +18,7 @@ export function Header(params) {
                     {!authData && <li> <Link to='/register' className="list-item">Register</Link> </li>}
                     <li> <Link to='/catalog' className="list-item">Catalog</Link> </li>
                     {authData && <li> <Link to='/create' className="list-item">Create</Link> </li>}
+                    {authData && <li> <Link to='/myCamps' className="list-item">My Camps</Link> </li>}
                     {authData && <li> <Link to='/logout' className="list-item">Logout</Link> </li>}
 
                 </ul>

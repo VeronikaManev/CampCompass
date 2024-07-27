@@ -16,6 +16,7 @@ import { Campsite } from './components/campsite/Campsite';
 import { Create } from './components/create/Create';
 import { ContextProvider } from './context/Context';
 import { Logout } from './components/logout/Logout';
+import { MyCamps } from './components/myCamps/MyCamps';
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/catalog' element={<Catalog />} />
+        <Route path='/myCamps' element={<MyCamps />} />
+
         <Route path='/create' element={<Create />} />
 
 
