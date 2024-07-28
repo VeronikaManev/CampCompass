@@ -1,26 +1,38 @@
+/* BACKGROUND */
+
+.backgroundContainerHome {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -20;
+}
+
+.backgroundContainerHome img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+
+/* CONTENT */
+
 .homeContainer{
     width: 100%;
-    height: calc(1080px - 88px - 100px);
-    background-image: url('./image/TCS-Camping-Sempach----Luftaufnahme-des-Campingplatzes-am-Wasser-2e2bc516-67d0-463d-82e7-48a22fcb0c6b.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+    margin: 0 auto;
+    text-align: center;
+    padding: 120px;
 }
 
 .homeContainer .title{
     font-size: 80px;
-    position: absolute;
-    top: 240px;
-    width: 100%;
-    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
 }
 
 .homeContainer .subtitle{
     font-size: 50px;
     font-weight: 600;
-    margin: 0 auto;
-    position: absolute;
-    top: 380px;
-    width: 100%;
-    text-align: center;
+    letter-spacing: 3px;
 }
