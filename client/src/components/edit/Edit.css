@@ -1,0 +1,126 @@
+/* BACKGROUND */
+
+.backgroundContainerEdit {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -20;
+}
+
+.backgroundContainerEdit img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+
+/* CONTENT */
+
+.editContainer {
+    width: 100%;
+    text-align: center;
+    padding: 120px 0;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editContainer .form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 30px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.editContainer .info{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.editContainer .form label {
+    font-size: 30px;
+}
+
+.editContainer .form input {
+    height: 50px;
+    width: 400px;
+    background-color: #2179c500;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    margin: 0 60px 0 20px;
+}
+
+.editContainer .form [name='info']{
+    width: 950px;
+}
+
+.editContainer .form input::placeholder {
+    color: rgb(4, 4, 4);
+}
+
+.editContainer .form .fielset {
+    border: 1px solid black;
+    display: flex;
+}
+
+.editContainer .form .fielset legend {
+    font-size: 24px;
+}
+
+.editContainer .form .fielset div {
+    margin: 10px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center
+}
+
+.editContainer .form .fielset input {
+    margin: 10px;
+    width: 50px;
+}
+
+.editContainer .form .fielset i {
+    font-size: 34px;
+    margin: 0 30px;
+}
+
+.editContainer .form .bntContainer{
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.editContainer .form .createBtn {
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: #2179c500;
+}
+
+.editContainer .form .resetBtn {
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: #2179c500;
+}
