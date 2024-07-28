@@ -15,7 +15,7 @@ export function CampsiteCard(props) {
 
             <div className="itemInfoContainer">
                 <h3>{campsite.title}</h3>
-                <p>{campsite.summary}</p>
+                <p>{campsite.info}</p>
             </div>
 
             <div className="itemMoreContainer">
