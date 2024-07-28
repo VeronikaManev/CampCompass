@@ -1,23 +1,32 @@
-.registerContainer{
+/* BACKGROUND */
+
+.backgroundContainerRegister {
+    position: absolute;
+    top: 0;
     width: 100%;
-    position: relative;
-    height: calc(1080px - 88px - 100px);
-    background-image: url('./image/kevin-ianeselli-ebnlHkqfUHY-unsplash.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+    height: 100vh;
+    z-index: -20;
 }
 
-.registerContainer .container{
-    position: absolute;
-    top: 200px;
+.backgroundContainerRegister img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+
+/* CONTENT */
+
+.registerContainer{
+    width: 100%;
+    text-align: center;
+    padding: 200px;
     display: flex;
     gap: 30px;
     flex-direction: column;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
     align-items: center;
+
 }
 
 .registerContainer .form{
@@ -54,7 +63,6 @@
     font-size: 30px;
     background-color: #2179c500;
 }
-
 
 .registerContainer .newUserContainer{
     background-color: #2179c500;

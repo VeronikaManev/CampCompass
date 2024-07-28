@@ -4,6 +4,8 @@ import { register } from '../../../data/auth';
 import './Register.css';
 import { Context } from '../../context/Context';
 import { useContext } from 'react';
+import heroImg from './image/NOkevin-ianeselli-ebnlHkqfUHY-unsplash.jpg';
+
 
 export function Register() {
 
@@ -34,9 +36,12 @@ export function Register() {
     }
 
     return (
-        <div className='registerContainer'>
+        <>
+            <div className="backgroundContainerRegister">
+                <img src={heroImg} alt="" />
+            </div>
 
-            <div className='container'>
+            <div className='registerContainer'>
 
                 <form onSubmit={onSubmit} className='form' action="">
                     <label htmlFor="email"><i className="fas fa-user"></i></label>
@@ -56,6 +61,6 @@ export function Register() {
                     <Link to='/login' className="goToLogin">Sign in</Link>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
