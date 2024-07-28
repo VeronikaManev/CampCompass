@@ -67,7 +67,7 @@
 .campsiteContainer .infoContainer{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .campsiteContainer .infoContainer p {
@@ -86,6 +86,7 @@
 }
 
 .campsiteContainer .corrections{
+    margin-top: 80px;
     display: flex;
     justify-content: space-around;
 }

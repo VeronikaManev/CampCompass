@@ -93,7 +93,7 @@ export function Campsite(props) {
 
                 <div className="comments">
 
-                    <h3 className="comment">Comments:</h3>
+                    {comments.length>0 && <h3 className="comment">Comments:</h3>}
 
                     <div className="addCommentContainer">
                         {authData && <AddComment setNewComment={setNewComment} />}
@@ -102,8 +102,6 @@ export function Campsite(props) {
                     <div className="allComments">
                         <AllComments comments={comments} setCommentsData={setCommentsData} />
                     </div>
-
-
 
                 </div>
 
