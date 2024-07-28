@@ -95,7 +95,7 @@ export function Edit(params) {
 
                     <div className='info'>
                         <div>
-                            <label htmlFor="title"><i className="fas fa-user"></i></label>
+                            <label htmlFor="title"><i className="fas fa-campground"></i></label>
                             <input onChange={changeHandler} type="text" name='title' placeholder='Campsite Name' value={formValues.title} />
                         </div>
                         <div>
@@ -107,7 +107,7 @@ export function Edit(params) {
                             <input onChange={changeHandler} type="text" name='city' placeholder='City' value={formValues.city} />
                         </div>
                         <div>
-                            <label htmlFor="imageUrl"><i className="fas fa-calendar-alt"></i></label>
+                            <label htmlFor="imageUrl"><i className="fas fa-image"></i></label>
                             <input onChange={changeHandler} type="text" name='imageUrl' placeholder='Photo' value={formValues.imageUrl} />
                         </div>
                         <div>
