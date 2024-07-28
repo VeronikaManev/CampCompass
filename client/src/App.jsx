@@ -17,6 +17,7 @@ import { Create } from './components/create/Create';
 import { ContextProvider } from './context/Context';
 import { Logout } from './components/logout/Logout';
 import { MyCamps } from './components/myCamps/MyCamps';
+import { Edit } from './components/edit/Edit';
 
 
 function App() {
@@ -24,21 +25,25 @@ function App() {
   return (
 
     <ContextProvider>
-      <Header></Header>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/catalog' element={<Catalog />} />
-        <Route path='/myCamps' element={<MyCamps />} />
+      <div>
+        <Header></Header>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/catalog' element={<Catalog />} />
+          <Route path='/myCamps' element={<MyCamps />} />
 
-        <Route path='/create' element={<Create />} />
+          <Route path='/create' element={<Create />} />
+          <Route path='/edit/:id' element={<Edit />} />
 
 
-        <Route path='/details/:id' element={<Campsite />} /> /
-        <Route path='/logout' element={<Logout />} />
-      </Routes>
+
+          <Route path='/details/:id' element={<Campsite />} /> /
+          <Route path='/logout' element={<Logout />} />
+        </Routes>
+      </div>
       <Footer></Footer>
     </ContextProvider>
 

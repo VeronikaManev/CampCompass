@@ -1,14 +1,17 @@
 import './About.css';
-// import heroImg from './image/jamie-street-_94HLr_QXo8-unsplash.jpg';
+import heroImg from './image/NOjamie-street-_94HLr_QXo8-unsplash.jpg';
 
 
 export function About(params) {
     return (
-        <div className='aboutContainer'>
+        <>
+            <div className="backgroundContainerAbout">
+                <img src={heroImg} alt="" />
+            </div>
 
-            <h2 className='title'> Welcome to CampCompass!</h2>
+            <div className='aboutContainer'>
 
-            <div className="container">
+                <h2 className='title'> Welcome to CampCompass!</h2>
 
                 <p className='subtitle'>
                     We are a group of outdoor enthusiasts and nature lovers united by our shared passion for camping and outdoor adventures. Our mission is to provide all camping enthusiasts with an easy and convenient way to plan their camping trips, discover new and exciting destinations, and share their experiences with the community.
@@ -22,12 +25,9 @@ export function About(params) {
                     Reviews and Ratings: Read and leave reviews for the campgrounds you've visited, helping other camping enthusiasts make informed choices.
                     Interactive Maps: Use our interactive maps to plan your routes and find the best camping spots.
                     Tips and Articles: Learn new camping tips and tricks from our community and experts in the field.
-                    
-
                 </p>
 
             </div>
-
-        </div>
+        </>
     )
 }
