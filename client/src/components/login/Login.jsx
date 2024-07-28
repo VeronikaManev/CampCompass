@@ -34,8 +34,6 @@ export function Login() {
             </div>
 
             <div className='loginContainer'>
-
-
                     <form onSubmit={onSubmit} className='form' action="">
                         <label htmlFor="emial"><i className="fas fa-user"></i></label>
                         <input onChange={changeHandler} type="email" name='email' placeholder='E-mail' value={values.email} />
