@@ -3,7 +3,7 @@ import { useForm } from '../../hooks/useForm';
 import './Create.css';
 import { createUnit } from '../../../data/units';
 import { useState } from 'react';
-// import heroImg from './image/kevin-ianeselli-ebnlHkqfUHY-unsplash.jpg';
+import heroImg from './image/shutterstock_625918454.0.webp';
 
 
 export function Create(params) {
@@ -45,7 +45,6 @@ export function Create(params) {
     async function createCampSubmitHandler(e) {
         e.preventDefault();
 
-
         await createUnit(formValues);
 
         // if (values.email == '' || values.password == '') {
@@ -65,28 +64,36 @@ export function Create(params) {
     }
 
     return (
-        <div className='createContainer'>
-            {/* <img className='heroImg' src={heroImg} alt="image-example" /> */}
+        <>
+            <div className="backgroundContainerCreate">
+                <img src={heroImg} alt="" />
+            </div>
 
-            <div className='container'>
+            <div className='createContainer'>
 
                 <form onSubmit={createCampSubmitHandler} className='form' action="">
 
                     <div className='info'>
-                        <label htmlFor="title"><i className="fas fa-user"></i></label>
-                        <input onChange={changeHandler} type="text" name='title' placeholder='Campsite Name' value={formValues.title} />
-
-                        <label htmlFor="country"><i className="fas fa-globe-americas"></i></label>
-                        <input onChange={changeHandler} type="text" name='country' placeholder='Country' value={formValues.country} />
-
-                        <label htmlFor="city"><i className="fas fa-city"></i></label>
-                        <input onChange={changeHandler} type="text" name='city' placeholder='City' value={formValues.city} />
-
-                        <label htmlFor="imageUrl"><i className="fas fa-calendar-alt"></i></label>
-                        <input onChange={changeHandler} type="text" name='imageUrl' placeholder='Photo' value={formValues.imageUrl} />
-
-                        <label htmlFor="info"><i className="fas fa-info"></i></label>
-                        <input onChange={changeHandler} type="text" name='info' placeholder='Description' value={formValues.info} />
+                        <div>
+                            <label htmlFor="title"><i className="fas fa-user"></i></label>
+                            <input onChange={changeHandler} type="text" name='title' placeholder='Campsite Name' value={formValues.title} />
+                        </div>
+                        <div>
+                            <label htmlFor="country"><i className="fas fa-globe-americas"></i></label>
+                            <input onChange={changeHandler} type="text" name='country' placeholder='Country' value={formValues.country} />
+                        </div>
+                        <div>
+                            <label htmlFor="city"><i className="fas fa-city"></i></label>
+                            <input onChange={changeHandler} type="text" name='city' placeholder='City' value={formValues.city} />
+                        </div>
+                        <div>
+                            <label htmlFor="imageUrl"><i className="fas fa-calendar-alt"></i></label>
+                            <input onChange={changeHandler} type="text" name='imageUrl' placeholder='Photo' value={formValues.imageUrl} />
+                        </div>
+                        <div>
+                            <label htmlFor="info"><i className="fas fa-info"></i></label>
+                            <input onChange={changeHandler} type="text" name='info' placeholder='Description' value={formValues.info} />
+                        </div>
                     </div>
 
                     <fieldset className="fielset">
@@ -118,11 +125,14 @@ export function Create(params) {
 
                     </fieldset>
 
-                    <button className="createBtn"><i className="fas fa-arrow-right"></i></button>
-                    <button onClick={resetFormHandler} className="resetBtn">X</button>
+                    <div className="bntContainer">
 
+                        <button className="createBtn"><i className="fas fa-arrow-right"></i></button>
+                        <button onClick={resetFormHandler} className="resetBtn">X</button>
+                      
+                    </div>
                 </form>
             </div>
-        </div>
+        </>
     )
 }
