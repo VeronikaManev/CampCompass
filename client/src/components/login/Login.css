@@ -1,28 +1,35 @@
-.loginContainer{
-    position: relative;
+/* BACKGROUND */
+
+.backgroundContainerLogin {
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: calc(1080px - 88px - 100px);
-    background-image: url('./image/pexels-cliford-mervil-988071-2398220.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+    height: 100vh;
+    z-index: -20;
 }
 
-.loginContainer .container{
-    position: absolute;
-    top: 200px;
+.backgroundContainerLogin img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+
+/* CONTENT */
+
+.loginContainer{
+    width: 100%;
+    text-align: center;
+    padding: 200px;
     display: flex;
     gap: 30px;
     flex-direction: column;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
     align-items: center;
 }
 
 .loginContainer .form{
     display: flex;
-    align-items: center;
 }
 
 .loginContainer .form label{
@@ -54,7 +61,6 @@
     font-size: 30px;
     background-color: #2179c500;
 }
-
 
 .loginContainer .newUserContainer{
     background-color: #2179c500;
