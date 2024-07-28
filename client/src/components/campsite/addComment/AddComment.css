@@ -1,0 +1,27 @@
+.addCommentContainer form {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.addCommentContainer form input{
+    width: 500px;
+    height: 80px;
+    font-size: 30px;
+    background-color: rgba(0, 0, 255, 0);
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.addCommentContainer .form input::placeholder {
+    color: rgb(4, 4, 4);
+}
+
+.addCommentContainer .form .addCommentBtn {
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: #2179c500;
+}

@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { getAllComments } from "../../../../data/units";
 import { useEffect, useState } from "react";
 import { CommentCard } from "../commentCard/CommentCard";
+import './AllComments.css';
+
 
 export function AllComments({comments, setCommentsData}) {
 

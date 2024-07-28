@@ -3,8 +3,10 @@ import { createComment } from "../../../../data/units";
 import { useForm } from "../../../hooks/useForm";
 import { Context } from "../../../context/Context";
 import { useParams } from "react-router-dom";
+import './AddComment.css';
 
-export function AddComment({setNewComment}) {
+
+export function AddComment({ setNewComment }) {
 
     const { id } = useParams();
 
@@ -26,7 +28,7 @@ export function AddComment({setNewComment}) {
             const result = await createComment(id, authData.email, values.commentText);
 
             setNewComment(result);
-            
+
             clearFormData();
 
         } catch (error) {
@@ -38,12 +40,10 @@ export function AddComment({setNewComment}) {
 
     return (
         <div className="addCommentContainer">
-            <div className="container">
-                <form onSubmit={onSubmitHandler} className="form">
-                    <input onChange={changeHandler} type="textarea" name="commentText" placeholder="Add comment" value={values.commentText} />
-                    <button className="addCommentBtn"><i className="fas fa-arrow-right"></i></button>
-                </form>
-            </div>
+            <form onSubmit={onSubmitHandler} className="form">
+                <input onChange={changeHandler} type="textarea" name="commentText" placeholder=" Add а comment" value={values.commentText} />
+                <button className="addCommentBtn"><i className="fas fa-arrow-right"></i></button>
+            </form>
         </div>
     );
 
