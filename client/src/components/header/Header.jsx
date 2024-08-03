@@ -1,11 +1,13 @@
 import { useContext } from 'react';
-import './Header.css';
-import logoImg from './image/logo-transparent-png.png';
 import { Link } from 'react-router-dom';
+
 import { Context } from '../../context/Context';
 
+import './Header.css';
+import logoImg from './image/logo-transparent-png.png';
 
-export function Header(params) {
+
+export function Header() {
     const { authData } = useContext(Context);
 
     return (

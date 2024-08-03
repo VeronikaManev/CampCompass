@@ -1,9 +1,12 @@
 import { useContext } from "react";
+import { useParams } from "react-router-dom";
+
 import { createComment } from "../../../../data/units";
 import { useForm } from "../../../hooks/useForm";
 import { Context } from "../../../context/Context";
-import { useParams } from "react-router-dom";
+
 import './AddComment.css';
+
 
 
 export function AddComment({ setNewComment }) {
@@ -34,7 +37,6 @@ export function AddComment({ setNewComment }) {
         } catch (error) {
             alert(error.message);
         }
-
     }
 
 

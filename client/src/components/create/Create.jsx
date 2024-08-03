@@ -7,7 +7,8 @@ import './Create.css';
 import heroImg from './image/shutterstock_625918454.0.webp';
 
 
-export function Create(params) {
+
+export function Create() {
 
     const navigate = useNavigate();
 

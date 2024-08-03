@@ -1,8 +1,11 @@
-import './Catalog.css';
 import { useEffect, useState } from 'react';
-import { getAllUnits, getById } from '../../../data/units';
-import heroImg from './image/NEWcamping-activities-for-adults.jpg';
+
+import { getAllUnits } from '../../../data/units';
 import { CampsiteCard } from './campsiteCard/CampsiteCard';
+
+import './Catalog.css';
+import heroImg from './image/NEWcamping-activities-for-adults.jpg';
+
 
 
 export function Catalog() {

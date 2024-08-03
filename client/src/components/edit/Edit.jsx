@@ -7,6 +7,7 @@ import './Edit.css';
 import heroImg from './image/tourist-tent-camping-sunset_87498-3217.avif';
 
 
+
 export function Edit(params) {
 
     const navigate = useNavigate();
@@ -42,8 +43,6 @@ export function Edit(params) {
         }
         currentCamp();
     }, []);
-
-    // const { values } = useForm({ title: '', country: '', city: '', open: '', info: '' });
 
 
     const changeHandler = (e) => {

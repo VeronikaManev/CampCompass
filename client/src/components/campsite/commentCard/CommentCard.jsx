@@ -7,6 +7,5 @@ export function CommentCard({comment}) {
             <p className="commentEmail">{comment.email}:</p>
             <p className="commentText">{comment.text}</p>
         </div>
-
     )
 }

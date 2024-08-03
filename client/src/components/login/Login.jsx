@@ -1,9 +1,11 @@
 import { Link, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+
 import { login } from '../../../data/auth';
 import { useForm } from '../../hooks/useForm';
-import './Login.css';
-import { useContext } from 'react';
 import { Context } from '../../context/Context';
+
+import './Login.css';
 import heroImg from './image/NOpexels-cliford-mervil-988071-2398220.jpg';
 
 
@@ -34,20 +36,20 @@ export function Login() {
             </div>
 
             <div className='loginContainer'>
-                    <form onSubmit={onSubmit} className='form' action="">
-                        <label htmlFor="emial"><i className="fas fa-user"></i></label>
-                        <input onChange={changeHandler} type="email" name='email' placeholder='E-mail' value={values.email} />
+                <form onSubmit={onSubmit} className='form' action="">
+                    <label htmlFor="emial"><i className="fas fa-user"></i></label>
+                    <input onChange={changeHandler} type="email" name='email' placeholder='E-mail' value={values.email} />
 
-                        <label htmlFor="password"><i className="fas fa-lock"></i></label>
-                        <input onChange={changeHandler} type="password" name='password' placeholder='Password' value={values.password} />
+                    <label htmlFor="password"><i className="fas fa-lock"></i></label>
+                    <input onChange={changeHandler} type="password" name='password' placeholder='Password' value={values.password} />
 
-                        <button className="loginBtn"><i className="fas fa-arrow-right"></i></button>
-                    </form>
+                    <button className="loginBtn"><i className="fas fa-arrow-right"></i></button>
+                </form>
 
-                    <div className='newUserContainer'>
-                        <p>New User?</p>
-                        <Link to='/register' className="goToRegister">Create an Account</Link>
-                    </div>
+                <div className='newUserContainer'>
+                    <p>New User?</p>
+                    <Link to='/register' className="goToRegister">Create an Account</Link>
+                </div>
             </div>
         </>
     )

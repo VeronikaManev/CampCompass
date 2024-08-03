@@ -1,6 +1,6 @@
 import './Footer.css';
 
-export function Footer(params) {
+export function Footer() {
     return (
         <footer className='footer'>
             <div className='container'>

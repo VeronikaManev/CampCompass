@@ -1,9 +1,9 @@
-.allCommentsContainer{
+.allCommentsContainer {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.allCommentsContainer div:last-of-type{
+.allCommentsContainer div:last-of-type {
     border: none;
-  }
+}

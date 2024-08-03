@@ -1,10 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+
 import { useForm } from '../../hooks/useForm';
 import { register } from '../../../data/auth';
-import './Register.css';
 import { Context } from '../../context/Context';
-import { useContext } from 'react';
+
+import './Register.css';
 import heroImg from './image/NOkevin-ianeselli-ebnlHkqfUHY-unsplash.jpg';
+
 
 
 export function Register() {

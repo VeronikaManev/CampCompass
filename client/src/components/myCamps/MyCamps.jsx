@@ -1,9 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
-import { getAllUnits, getById, getMyCamps } from '../../../data/units';
-import { CampsiteCard } from '../catalog/campsiteCard/CampsiteCard';
-import { Context } from '../../context/Context';
-import heroImg from './image/people-at-a-campsite-First.jpg';
 
+import { getMyCamps } from '../../../data/units';
+import { Context } from '../../context/Context';
+
+import { CampsiteCard } from '../catalog/campsiteCard/CampsiteCard';
+import heroImg from './image/people-at-a-campsite-First.jpg';
 
 
 

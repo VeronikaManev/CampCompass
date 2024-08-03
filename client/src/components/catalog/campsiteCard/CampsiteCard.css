@@ -34,7 +34,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 1; /* Брой редове, които да се показват */
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
 
@@ -43,7 +43,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Брой редове, които да се показват */
+    -webkit-line-clamp: 3; 
     -webkit-box-orient: vertical;
 }
 
@@ -68,7 +68,6 @@
     font-size: 30px;
     cursor: pointer;
     text-decoration: none;
-    /* transition: transform 0.3s; */
 }
 
 .catalogContainer .moreInfo a{
@@ -77,7 +76,6 @@
 }
 
 .catalogContainer .moreBtn:hover {
-    /* transform: scale(1.2); */
     transform:  translateX(10px);
 }
 
