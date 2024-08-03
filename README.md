@@ -88,5 +88,5 @@ Feel free to submit issues or pull requests if you have suggestions or improveme
 
 ## Contact
 
-If you have any questions or need assistance, you can reach us at: veronicadoychinova@gmail.com
+If you have any questions or need assistance, you can reach me at: veronicadoychinova@gmail.com
 
