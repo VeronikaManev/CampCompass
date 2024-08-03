@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import { getAllUnits, getById, getMyCamps } from '../../../data/units';
 import { CampsiteCard } from '../catalog/campsiteCard/CampsiteCard';
 import { Context } from '../../context/Context';
-import heroImg from '../catalog/image/pexels-alan-caldwell-185375-587976.jpg';
+import heroImg from './image/people-at-a-campsite-First.jpg';
+
 
 
 
@@ -24,17 +25,23 @@ export function MyCamps() {
     }, [])
 
     return (
-        <div className='catalogContainer'>
-            <section className="imgContainer">
-                <img className='heroImg' src={heroImg} alt="image-example" />
-                <h2 className='title'>Your camps</h2>
-            </section>
+        <>
+            <div className="backgroundContainerCatalog">
+                <img src={heroImg} alt="" />
+            </div>
 
-            <section className='catalog'>
-                {myCamps.map((x) => (
-                    <CampsiteCard key={x._id} data={x} />
-                ))}
-            </section>
-        </div>
+            <div className='catalogContainer'>
+                <section className="textContainer">
+                    <h2 className='title'>Your camps</h2>
+                    <p className='subtitle'>Here are all the campsites you've added</p>
+                </section>
+
+                <section className='catalog'>
+                    {myCamps.map((x) => (
+                        <CampsiteCard key={x._id} data={x} />
+                    ))}
+                </section>
+            </div>
+        </>
     )
 }

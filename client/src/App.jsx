@@ -29,11 +29,10 @@ function App() {
       <div>
         <Header></Header>
         <Routes>
-          
+
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
+
           <Route path='/catalog' element={<Catalog />} />
           <Route path='/details/:id' element={<Campsite />} /> /
 
@@ -43,6 +42,9 @@ function App() {
             <Route path='/myCamps' element={<MyCamps />} />
             <Route path='/logout' element={<Logout />} />
           </Route>
+
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
 
         </Routes>
       </div>

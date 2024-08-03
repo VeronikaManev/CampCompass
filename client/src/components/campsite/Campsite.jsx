@@ -62,6 +62,7 @@ export function Campsite(props) {
 
                 <h1>Welcome to {currentCamp.title}</h1>
                 <p className='shortInfo' >{currentCamp.country} | {currentCamp.city}</p>
+                <p className='webpage' >{currentCamp.webpage}</p>
 
                 <div className="innerContainer">
 

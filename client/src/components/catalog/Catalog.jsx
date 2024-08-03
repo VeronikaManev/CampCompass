@@ -21,14 +21,12 @@ export function Catalog() {
 
     return (
         <>
-
             <div className="backgroundContainerCatalog">
                 <img src={heroImg} alt="" />
             </div>
 
             <div className='catalogContainer'>
-                <section className="imgContainer">
-                    {/* <img className='heroImg' src={heroImg} alt="image-example" /> */}
+                <section className="textContainer">
                     <h2 className='title'>Find your dream campsite now</h2>
                     <p className='subtitle'>Navigate Your Next Adventure</p>
                 </section>

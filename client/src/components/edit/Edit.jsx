@@ -55,6 +55,7 @@ export function Edit(params) {
             city: '',
             imageUrl: '',
             info: '',
+            webpage: '',
             beach: false,
             petFriendly: false,
             shower: false,
@@ -93,28 +94,34 @@ export function Edit(params) {
 
                 <form onSubmit={editCampSubmitHandler} className='form' action="">
 
-                    <div className='info'>
+                <div className='info'>
                         <div>
                             <label htmlFor="title"><i className="fas fa-campground"></i></label>
                             <input onChange={changeHandler} type="text" name='title' placeholder='Campsite Name' value={formValues.title} />
-                        </div>
-                        <div>
-                            <label htmlFor="country"><i className="fas fa-globe-americas"></i></label>
-                            <input onChange={changeHandler} type="text" name='country' placeholder='Country' value={formValues.country} />
-                        </div>
-                        <div>
-                            <label htmlFor="city"><i className="fas fa-city"></i></label>
-                            <input onChange={changeHandler} type="text" name='city' placeholder='City' value={formValues.city} />
                         </div>
                         <div>
                             <label htmlFor="imageUrl"><i className="fas fa-image"></i></label>
                             <input onChange={changeHandler} type="text" name='imageUrl' placeholder='Photo' value={formValues.imageUrl} />
                         </div>
                         <div>
+                            <label htmlFor="webpage"><i className="fas fa-link"></i></label>
+                            <input onChange={changeHandler} type="text" name='webpage' placeholder='Webpage' value={formValues.webpage} />
+                        </div>
+                        <div>
+                            <label htmlFor="country"><i className="fas fa-globe-americas"></i></label>
+                            <input onChange={changeHandler} type="text" name='country' placeholder='Country' value={formValues.country} />
+                        </div>
+                        <div>
+                            <label htmlFor="city"><i className="fas fa-map-marker-alt"></i></label>
+                            <input onChange={changeHandler} type="text" name='city' placeholder='City' value={formValues.city} />
+                        </div>
+
+                        <div>
                             <label htmlFor="info"><i className="fas fa-info"></i></label>
                             <input onChange={changeHandler} type="text" name='info' placeholder='Description' value={formValues.info} />
                         </div>
                     </div>
+
 
                     <fieldset className="fielset">
                         <legend>Mark if available:</legend>
