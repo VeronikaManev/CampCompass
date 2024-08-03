@@ -55,7 +55,7 @@
 }
 
 .catalogContainer .catalog {
-    background: linear-gradient(180deg, #e0e0e0, #8b8b8b);;
+    background: linear-gradient(180deg, #e0e0e0d6, #8b8b8bbf);;
     padding: 40px;
     justify-content: center;
     display: grid;

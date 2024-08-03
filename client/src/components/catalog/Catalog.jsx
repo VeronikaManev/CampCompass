@@ -1,7 +1,7 @@
 import './Catalog.css';
 import { useEffect, useState } from 'react';
 import { getAllUnits, getById } from '../../../data/units';
-import heroImg from './image/pexels-alan-caldwell-185375-587976.jpg';
+import heroImg from './image/NEWcamping-activities-for-adults.jpg';
 import { CampsiteCard } from './campsiteCard/CampsiteCard';
 
 
