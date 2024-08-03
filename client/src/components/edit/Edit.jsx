@@ -1,8 +1,9 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { useForm } from '../../hooks/useForm';
-import './Edit.css';
-import { createUnit, getById, updateUnit } from '../../../data/units';
 import { useEffect, useState } from 'react';
+
+import { getById, updateUnit } from '../../../data/units';
+
+import './Edit.css';
 import heroImg from './image/tourist-tent-camping-sunset_87498-3217.avif';
 
 
@@ -18,6 +19,7 @@ export function Edit(params) {
         city: '',
         imageUrl: '',
         info: '',
+        webpage: '',
         beach: false,
         petFriendly: false,
         shower: false,
@@ -68,13 +70,9 @@ export function Edit(params) {
 
         await updateUnit(id, formValues);
 
-        // if (values.email == '' || values.password == '') {
-        //     return alert('All fields are requires!');
-        // }
-
-        // if (values.password != values.repeat) {
-        //     return alert('Passwords don\'t match!');
-        // }
+        if (formValues.title == '' || formValues.country == '' || formValues.city == '' || formValues.imageUrl == '' || formValues.info == '' || formValues.webpage == '') {
+            return alert('All fields are requires!');
+        }
 
         resetFormHandler();
         navigate('/catalog');
@@ -93,7 +91,7 @@ export function Edit(params) {
             <div className='editContainer'>
 
                 <form onSubmit={editCampSubmitHandler} className='form' action="">
-
+                    
                 <div className='info'>
                         <div>
                             <label htmlFor="title"><i className="fas fa-campground"></i></label>
@@ -115,7 +113,6 @@ export function Edit(params) {
                             <label htmlFor="city"><i className="fas fa-map-marker-alt"></i></label>
                             <input onChange={changeHandler} type="text" name='city' placeholder='City' value={formValues.city} />
                         </div>
-
                         <div>
                             <label htmlFor="info"><i className="fas fa-info"></i></label>
                             <input onChange={changeHandler} type="text" name='info' placeholder='Description' value={formValues.info} />

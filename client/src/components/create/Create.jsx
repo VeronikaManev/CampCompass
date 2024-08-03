@@ -1,8 +1,9 @@
 import { useNavigate } from 'react-router-dom';
-import { useForm } from '../../hooks/useForm';
-import './Create.css';
-import { createUnit } from '../../../data/units';
 import { useState } from 'react';
+
+import { createUnit } from '../../../data/units';
+
+import './Create.css';
 import heroImg from './image/shutterstock_625918454.0.webp';
 
 
@@ -10,14 +11,13 @@ export function Create(params) {
 
     const navigate = useNavigate();
 
-    // const { values } = useForm({ title: '', country: '', city: '', open: '', info: '' });
-
     const [formValues, setFormValues] = useState({
         title: '',
         country: '',
         city: '',
         imageUrl: '',
         info: '',
+        webpage: '',
         beach: false,
         petFriendly: false,
         shower: false,
@@ -48,13 +48,9 @@ export function Create(params) {
 
         await createUnit(formValues);
 
-        // if (values.email == '' || values.password == '') {
-        //     return alert('All fields are requires!');
-        // }
-
-        // if (values.password != values.repeat) {
-        //     return alert('Passwords don\'t match!');
-        // }
+        if (formValues.title == '' || formValues.country == '' || formValues.city == '' || formValues.imageUrl == '' || formValues.info == '' || formValues.webpage == '') {
+            return alert('All fields are requires!');
+        }
 
         resetFormHandler();
         navigate('/catalog');
@@ -95,7 +91,6 @@ export function Create(params) {
                             <label htmlFor="city"><i className="fas fa-map-marker-alt"></i></label>
                             <input onChange={changeHandler} type="text" name='city' placeholder='City' value={formValues.city} />
                         </div>
-
                         <div>
                             <label htmlFor="info"><i className="fas fa-info"></i></label>
                             <input onChange={changeHandler} type="text" name='info' placeholder='Description' value={formValues.info} />

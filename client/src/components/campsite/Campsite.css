@@ -45,6 +45,12 @@
     padding: 30px;
 }
 
+.campsiteContainer .webpage {
+    font-size: 48px;
+    padding: 20px;
+    color: black;
+}
+
 .campsiteContainer .innerContainer {
     display: flex;
     width: 80%;
@@ -67,7 +73,6 @@
 .campsiteContainer .infoContainer{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 
 .campsiteContainer .infoContainer p {
