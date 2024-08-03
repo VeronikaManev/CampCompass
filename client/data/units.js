@@ -1,11 +1,10 @@
 import { get, post, put, del } from "./api.js";
 
-//TODO change with current endpoint (see the description file)
 
 const endpoints = {
-    catalog: '/data/camps', //TODO with new jsonstorage?
-    byId: '/data/camps', // ! Without "/"
-    like: '/data/useful', //Optionall ==like
+    catalog: '/data/camps', 
+    byId: '/data/camps', 
+    like: '/data/useful', 
     comments: '/data/comments',
 }
 
@@ -31,7 +30,9 @@ export async function deleteUnit(id) {
 export async function getMyCamps(ownerId) {
     return get(`/data/camps?where=_ownerId%3D%22${ownerId}%22`);
 }
-//Option Like
+
+
+//Likes
 export async function likeUnit(data) {
     return post(endpoints.like, data);
 }
@@ -44,12 +45,9 @@ export async function isAlreadyLiked(characterId, userId) {
     return get(`/data/useful?where=characterId%3D%22${characterId}%22%20and%20_ownerId%3D%22${userId}%22&count`);  //TODO current url
 }
 
-//Option search
-export async function searchUnits(query) {
-    return get(`/data/cars?where=model%20LIKE%20%22${query}%22`);  //TODO current url
-}
 
-//Option comments
+
+//Comments
 
 export async function getAllComments(campId) {
     return get(`/data/comments?where=campId%3D%22${campId}%22`);

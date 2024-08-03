@@ -2,7 +2,7 @@ import './About.css';
 import heroImg from './image/NOjamie-street-_94HLr_QXo8-unsplash.jpg';
 
 
-export function About(params) {
+export function About() {
     return (
         <>
             <div className="backgroundContainerAbout">

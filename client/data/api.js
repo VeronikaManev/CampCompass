@@ -1,6 +1,7 @@
-import { getUserData, setUserData, clearUserData } from "./util.js";
+import { getUserData, clearUserData } from "./util.js";
 
-const host = 'http://localhost:3030'; //TODO 
+
+const host = 'http://localhost:3030';
 
 async function request(method, url, data) {
     const options = {

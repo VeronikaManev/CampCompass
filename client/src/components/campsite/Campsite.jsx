@@ -1,11 +1,13 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
+
 import { deleteUnit, getById } from '../../../data/units';
-import './Campsite.css';
-import { AddComment } from './addComment/AddComment';
 import { Context } from '../../context/Context';
+import { AddComment } from './addComment/AddComment';
 import { AllComments } from './allComments/AllComments';
+
+import './Campsite.css';
 import heroImg from './image/istockphoto-1422849327-170667a.webp';
 
 
@@ -62,7 +64,6 @@ export function Campsite(props) {
 
                 <h1>Welcome to <a className='webpage' href={currentCamp.webpage} target='_blank'>{currentCamp.title}</a></h1>
                 <p className='shortInfo' >{currentCamp.country} | {currentCamp.city}</p>
-                {/* <a className='webpage' href={currentCamp.webpage}></a> */}
 
                 <div className="innerContainer">
 
