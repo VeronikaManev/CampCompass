@@ -78,7 +78,15 @@ For testing purposes, the catalog already contains several campsites added by th
 
 These test campsites can be used to explore the application's features, such as creating, editing, and deleting campsites.
 
-<!-- ## Contact
+## Educational Project
 
-If you have any questions or need assistance, you can reach us at: -->
+This project is an educational assignment developed with React. It adheres to specific requirements and is intended to demonstrate practical use of React and related technologies.
+
+## Contributing
+
+Feel free to submit issues or pull requests if you have suggestions or improvements.
+
+## Contact
+
+If you have any questions or need assistance, you can reach us at: veronicadoychinova@gmail.com
 
