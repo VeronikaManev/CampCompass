@@ -7,7 +7,6 @@ export function Footer() {
             <div className='container'>
 
                 <ul className="footer-links">
-                    <li><a href="#">Contact</a></li>
                     <li><Link to='/privacyPolicy'>Privacy Policy</Link></li>
                 </ul>
 
