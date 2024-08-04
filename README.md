@@ -1,6 +1,10 @@
 # CampCompass
 
-CampCompass is a web application for discovering and sharing campgrounds around the world. Users can search for, view, and add new campgrounds, as well as leave reviews and ratings.
+CampCompass is a web application for discovering and sharing campgrounds around the world. Users can search for, view, and add new campgrounds, as well as leave reviews.
+
+## Educational Project
+
+This project is an educational assignment developed with React. It adheres to specific requirements and is intended to demonstrate practical use of React and related technologies.
 
 ## Design Specifications
 
@@ -27,22 +31,19 @@ CampCompass is a web application for discovering and sharing campgrounds around 
 - Clone the repository:
     git clone https://github.com/VeronikaManev/CampCompass
 
-
-- Install dependencies:
-    ```bash
-    npm install
-    ```
-
-
-- Start the SoftUni Practice server in a new terminal:
+- Navigate to the server directory to start the SoftUni Practice server:
     ```bash
     node server.js
     ```
 
-
-- Navigate to the client directory and start it in a new terminal:
+- Navigate to the client directory and install dependencies:
     ```bash
-    npm tun dev
+    npm install
+    ```
+
+-  Start client:
+    ```bash
+    npm run dev
     ```
 
 ## Usage
@@ -77,14 +78,6 @@ For testing purposes, the catalog already contains several campsites added by th
    - george@abv.bg
 
 These test campsites can be used to explore the application's features, such as creating, editing, and deleting campsites.
-
-## Educational Project
-
-This project is an educational assignment developed with React. It adheres to specific requirements and is intended to demonstrate practical use of React and related technologies.
-
-## Contributing
-
-Feel free to submit issues or pull requests if you have suggestions or improvements.
 
 ## Contact
 
