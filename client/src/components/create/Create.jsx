@@ -57,7 +57,7 @@ export function Create() {
 
             if (data) {
                 resetFormHandler();
-                navigate('/catalog');
+                navigate(`/details/${data._id}`);
             }
 
         } catch (error) {
