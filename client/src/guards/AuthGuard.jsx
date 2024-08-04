@@ -3,7 +3,7 @@ import { Context } from "../context/Context";
 import { Navigate, Outlet } from 'react-router-dom';
 
 
-export function AuthGuard(props) {
+export function AuthGuard() {
 
     const { authData } = useContext(Context);
 
