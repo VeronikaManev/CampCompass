@@ -32,8 +32,19 @@ export function Campsite(props) {
     }
 
     async function onDeleteHandler() {
-        await deleteUnit(currentCamp._id);
-        navigate('/catalog');
+
+        const isConfirmed = window.confirm("Are you sure you want to delete this campsite?");
+
+        if (isConfirmed) {
+
+            try {
+                await deleteUnit(currentCamp._id);
+                navigate('/catalog');
+                
+            } catch (error) {
+                alert(error.message);
+            }
+        }
     }
 
     useEffect(() => {
@@ -50,7 +61,7 @@ export function Campsite(props) {
                 alert(error.message);
             }
         }
-        
+
         currentCamp();
     }, []);
 
@@ -97,7 +108,7 @@ export function Campsite(props) {
 
                 <div className="comments">
 
-                    {comments.length>0 && <h3 className="comment">Comments:</h3>}
+                    {comments.length > 0 && <h3 className="comment">Comments:</h3>}
 
                     <div className="addCommentContainer">
                         {authData && <AddComment setNewComment={setNewComment} />}
