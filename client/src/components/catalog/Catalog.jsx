@@ -30,6 +30,10 @@ export function Catalog() {
         allCampsites();
     }, [])
 
+    const subtitle = campsites.length > 0
+        ? 'Navigate Your Next Adventure'
+        : 'Unfortunately, there are no campsites available to view at the moment.';
+
     return (
         <>
             <div className="backgroundContainerCatalog">
@@ -39,14 +43,16 @@ export function Catalog() {
             <div className='catalogContainer'>
                 <section className="textContainer">
                     <h2 className='title'>Find your dream campsite now</h2>
-                    <p className='subtitle'>Navigate Your Next Adventure</p>
+                    <p className='subtitle'>{subtitle}</p>
                 </section>
 
-                <section className='catalog'>
-                    {campsites.map((x) => (
-                        <CampsiteCard key={x._id} data={x} />
-                    ))}
-                </section>
+                {campsites.length > 0 && (
+                    <section className='catalog'>
+                        {campsites.map((x) => (
+                            <CampsiteCard key={x._id} data={x} />
+                        ))}
+                    </section>
+                )}
             </div>
         </>
     )

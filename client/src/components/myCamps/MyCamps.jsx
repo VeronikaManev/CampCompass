@@ -34,6 +34,10 @@ export function MyCamps() {
 
     }, [])
 
+    const subtitle = myCamps.length > 0
+        ? 'Here are all the campsites you\'ve added'
+        : 'You haven\'t added any campsites yet.';
+
     return (
         <>
             <div className="backgroundContainerCatalog">
@@ -43,14 +47,16 @@ export function MyCamps() {
             <div className='catalogContainer'>
                 <section className="textContainer">
                     <h2 className='title'>Your camps</h2>
-                    <p className='subtitle'>Here are all the campsites you've added</p>
+                    <p className='subtitle'>{subtitle}</p>
                 </section>
 
-                <section className='catalog'>
-                    {myCamps.map((x) => (
-                        <CampsiteCard key={x._id} data={x} />
-                    ))}
-                </section>
+                {myCamps.length > 0 && (
+                    <section className='catalog'>
+                        {myCamps.map((x) => (
+                            <CampsiteCard key={x._id} data={x} />
+                        ))}
+                    </section>
+                )}
             </div>
         </>
     )
