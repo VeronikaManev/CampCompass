@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export function Footer() {
@@ -7,7 +8,7 @@ export function Footer() {
 
                 <ul className="footer-links">
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><Link to='/privacyPolicy'>Privacy Policy</Link></li>
                 </ul>
 
                 <p>&copy; 2024 CampCompass. All Rights Reserved.</p>

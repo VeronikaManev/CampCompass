@@ -20,6 +20,7 @@ import { MyCamps } from './components/myCamps/MyCamps';
 import { Edit } from './components/edit/Edit';
 import { AuthGuard } from './guards/AuthGuard';
 import { UserGuard } from './guards/UserGuard';
+import { PrivacyPolicy } from './components/privacyPolicy/PrivacyPolicy';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
 
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/privacyPolicy' element={<PrivacyPolicy />} />
 
           <Route path='/catalog' element={<Catalog />} />
           <Route path='/details/:id' element={<Campsite />} /> /
