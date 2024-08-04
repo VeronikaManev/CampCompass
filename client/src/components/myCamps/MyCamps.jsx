@@ -18,7 +18,16 @@ export function MyCamps() {
     useEffect(() => {
         const allMyCamps = async () => {
 
-            setMyCamps(await getMyCamps(authData._id));
+            try {
+                const data = await getMyCamps(authData._id);
+
+                if (data) {
+                    setMyCamps(data);
+                }
+
+            } catch (error) {
+                alert(error.message);
+            }
         }
 
         allMyCamps();

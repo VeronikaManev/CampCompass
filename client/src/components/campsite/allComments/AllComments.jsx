@@ -15,11 +15,19 @@ export function AllComments({ comments, setCommentsData }) {
     useEffect(() => {
         const allComments = async () => {
 
-            setCommentsData(await getAllComments(id));
+            try {
+                const data = await getAllComments(id);
+
+                if (data) {
+                    setCommentsData(data);
+                }
+
+            } catch (error) {
+                alert(error.message);
+            }
         }
 
         allComments();
-
     }, [])
 
     return (

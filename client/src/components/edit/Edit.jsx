@@ -67,14 +67,22 @@ export function Edit(params) {
     async function editCampSubmitHandler(e) {
         e.preventDefault();
 
-        await updateUnit(id, formValues);
+        try {
 
-        if (formValues.title == '' || formValues.country == '' || formValues.city == '' || formValues.imageUrl == '' || formValues.info == '' || formValues.webpage == '') {
-            return alert('All fields are requires!');
+            if (formValues.title == '' || formValues.country == '' || formValues.city == '' || formValues.imageUrl == '' || formValues.info == '' || formValues.webpage == '') {
+                return alert('All fields are required!');
+            }
+
+            const data = await updateUnit(id, formValues);
+
+            if (data) {
+                resetFormHandler();
+                navigate('/catalog');
+            }
+
+        } catch (error) {
+            alert(error.message);
         }
-
-        resetFormHandler();
-        navigate('/catalog');
     }
 
     async function onCheckboxChangeHandler(e) {
@@ -90,8 +98,8 @@ export function Edit(params) {
             <div className='editContainer'>
 
                 <form onSubmit={editCampSubmitHandler} className='form' action="">
-                    
-                <div className='info'>
+
+                    <div className='info'>
                         <div>
                             <label htmlFor="title"><i className="fas fa-campground"></i></label>
                             <input onChange={changeHandler} type="text" name='title' placeholder='Campsite Name' value={formValues.title} />
@@ -151,7 +159,7 @@ export function Edit(params) {
                     <div className="bntContainer">
 
                         <button className="createBtn"><i className="fas fa-check"></i></button>
-                        <button onClick={resetFormHandler} className="resetBtn">X</button>
+                        <button type="button" onClick={resetFormHandler} className="resetBtn">X</button>
 
                     </div>
                 </form>

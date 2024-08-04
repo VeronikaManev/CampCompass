@@ -15,11 +15,19 @@ export function Catalog() {
     useEffect(() => {
         const allCampsites = async () => {
 
-            setCampsites(Object.values(await getAllUnits()))
+            try {
+                const data = Object.values(await getAllUnits());
+
+                if (data) {
+                    setCampsites(data);
+                }
+
+            } catch (error) {
+                alert(error.message);
+            }
         }
 
         allCampsites();
-
     }, [])
 
     return (

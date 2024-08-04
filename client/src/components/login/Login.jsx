@@ -23,10 +23,24 @@ export function Login() {
 
     async function onSubmit(e) {
         e.preventDefault();
-        const userData = await login(values.email, values.password);
-        setContextAuthData(userData)
 
-        navigate('/');
+        try {
+
+            if (values.email == '' || values.password == '') {
+                throw new Error('All fields are required!');
+            }
+
+            const userData = await login(values.email, values.password);
+
+            if (userData) {
+                setContextAuthData(userData);
+                navigate('/');
+            }
+
+        } catch (error) {
+            alert(error.message);
+        }
+
     }
 
     return (

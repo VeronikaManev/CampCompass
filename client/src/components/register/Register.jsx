@@ -24,18 +24,27 @@ export function Register() {
 
     async function onSubmit(e) {
         e.preventDefault();
-        const userData = await register(values.email, values.password);
-        setContextAuthData(userData);
 
-        if (values.email == '' || values.password == '') {
-            return alert('All fields are requires!');
+        try {
+
+            if (values.email == '' || values.password == '') {
+                throw new Error('All fields are required!');
+            }
+
+            if (values.password !== values.repeat) {
+                throw new Error('Passwords don\'t match!');
+            }
+
+            const userData = await register(values.email, values.password);
+
+            if (userData) {
+                setContextAuthData(userData);
+                navigate('/');
+            }
+
+        } catch (error) {
+            alert(error.message);
         }
-
-        if (values.password != values.repeat) {
-            return alert('Passwords don\'t match!');
-        }
-
-        navigate('/');
     }
 
     return (

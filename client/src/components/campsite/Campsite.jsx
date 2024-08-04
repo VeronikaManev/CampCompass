@@ -38,6 +38,7 @@ export function Campsite(props) {
 
     useEffect(() => {
         const currentCamp = async () => {
+
             try {
                 const data = await getById(id);
 
@@ -46,9 +47,10 @@ export function Campsite(props) {
                 }
 
             } catch (error) {
-                alert(error);
+                alert(error.message);
             }
         }
+        
         currentCamp();
     }, []);
 

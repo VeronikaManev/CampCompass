@@ -28,9 +28,9 @@ export function AddComment({ setNewComment }) {
                 throw new Error('Please add a comment!');
             }
 
-            const result = await createComment(id, authData.email, values.commentText);
+            const data = await createComment(id, authData.email, values.commentText);
 
-            setNewComment(result);
+            setNewComment(data);
 
             clearFormData();
 

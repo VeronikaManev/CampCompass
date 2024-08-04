@@ -47,14 +47,22 @@ export function Create() {
     async function createCampSubmitHandler(e) {
         e.preventDefault();
 
-        await createUnit(formValues);
+        try {
 
-        if (formValues.title == '' || formValues.country == '' || formValues.city == '' || formValues.imageUrl == '' || formValues.info == '' || formValues.webpage == '') {
-            return alert('All fields are requires!');
+            if (formValues.title == '' || formValues.country == '' || formValues.city == '' || formValues.imageUrl == '' || formValues.info == '' || formValues.webpage == '') {
+                throw new Error('All fields are required!');
+            }
+
+            const data = await createUnit(formValues);
+
+            if (data) {
+                resetFormHandler();
+                navigate('/catalog');
+            }
+
+        } catch (error) {
+            alert(error.message);
         }
-
-        resetFormHandler();
-        navigate('/catalog');
     }
 
     async function onCheckboxChangeHandler(e) {
@@ -130,7 +138,7 @@ export function Create() {
                     <div className="bntContainer">
 
                         <button className="createBtn"><i className="fas fa-arrow-right"></i></button>
-                        <button onClick={resetFormHandler} className="resetBtn">X</button>
+                        <button type="button" onClick={resetFormHandler} className="resetBtn">X</button>
 
                     </div>
                 </form>
