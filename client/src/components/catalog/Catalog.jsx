@@ -13,6 +13,7 @@ export function Catalog() {
     const [campsites, setCampsites] = useState([]);
 
     useEffect(() => {
+
         const allCampsites = async () => {
 
             try {

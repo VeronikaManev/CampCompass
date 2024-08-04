@@ -11,7 +11,7 @@ import './Campsite.css';
 import heroImg from './image/istockphoto-1422849327-170667a.webp';
 
 
-export function Campsite(props) {
+export function Campsite() {
 
     const navigate = useNavigate();
 
@@ -40,7 +40,7 @@ export function Campsite(props) {
             try {
                 await deleteUnit(currentCamp._id);
                 navigate('/catalog');
-                
+
             } catch (error) {
                 alert(error.message);
             }
@@ -48,6 +48,7 @@ export function Campsite(props) {
     }
 
     useEffect(() => {
+
         const currentCamp = async () => {
 
             try {

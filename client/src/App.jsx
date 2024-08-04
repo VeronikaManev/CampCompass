@@ -1,26 +1,25 @@
-import './App.css';
-
-import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { login } from '../data/auth';
-
-import { Home } from './components/home/Home';
-import { About } from './components/about/About';
-import { Header } from './components/header/Header';
-import { Footer } from './components/footer/Footer';
-import { Login } from './components/login/Login';
-import { Register } from './components/register/Register';
-import { Catalog } from './components/catalog/Catalog';
-import { Campsite } from './components/campsite/Campsite';
-import { Create } from './components/create/Create';
 import { ContextProvider } from './context/Context';
-import { Logout } from './components/logout/Logout';
-import { MyCamps } from './components/myCamps/MyCamps';
-import { Edit } from './components/edit/Edit';
+
 import { AuthGuard } from './guards/AuthGuard';
 import { UserGuard } from './guards/UserGuard';
+
+import { Header } from './components/header/Header';
+import { Footer } from './components/footer/Footer';
+import { Home } from './components/home/Home';
+import { About } from './components/about/About';
+import { Login } from './components/login/Login';
+import { Register } from './components/register/Register';
+import { Logout } from './components/logout/Logout';
+import { Catalog } from './components/catalog/Catalog';
+import { MyCamps } from './components/myCamps/MyCamps';
+import { Campsite } from './components/campsite/Campsite';
+import { Create } from './components/create/Create';
+import { Edit } from './components/edit/Edit';
 import { PrivacyPolicy } from './components/privacyPolicy/PrivacyPolicy';
+
+import './App.css';
 
 
 function App() {
@@ -29,7 +28,7 @@ function App() {
 
     <ContextProvider>
       <div>
-        <Header></Header>
+        <Header />
         <Routes>
 
           <Route path='/' element={<Home />} />
@@ -53,9 +52,8 @@ function App() {
 
         </Routes>
       </div>
-      <Footer></Footer>
+      <Footer />
     </ContextProvider >
-
   )
 }
 
