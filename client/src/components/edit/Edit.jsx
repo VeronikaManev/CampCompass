@@ -8,7 +8,7 @@ import heroImg from './image/tourist-tent-camping-sunset_87498-3217.avif';
 
 
 
-export function Edit(params) {
+export function Edit() {
 
     const navigate = useNavigate();
 
@@ -77,7 +77,7 @@ export function Edit(params) {
 
             if (data) {
                 resetFormHandler();
-                navigate('/catalog');
+                navigate(`/details/${id}`);
             }
 
         } catch (error) {
