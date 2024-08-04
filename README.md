@@ -41,7 +41,7 @@ This project is an educational assignment developed with React. It adheres to sp
     npm install
     ```
 
--  Start client:
+-  Start the client:
     ```bash
     npm run dev
     ```
