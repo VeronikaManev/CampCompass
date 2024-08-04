@@ -1400,6 +1400,22 @@
                 recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
                 _createdOn: 1614260681375,
                 _id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
+            },
+            "125c3914-03e9-4eaf-b8bf-35aadadbd185": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                campId: "3564027f-adcd-4425-b2c0-1253d2386c0c",
+                email: "george@abv.bg",
+                text: "Campingplatz Lörick is a fantastic spot for a relaxing retreat by the Rhine. The spacious sites and modern amenities make it a perfect choice for families, friends, or solo travelers. I enjoyed fishing, swimming, and hiking nearby. The free Wi-Fi and cozy facilities add great comfort to the stay. Plus, the local attractions and restaurants nearby are a nice bonus. Highly recommend for a memorable outdoor escape!",
+                _createdOn: 1722782533404,
+                _id: "125c3914-03e9-4eaf-b8bf-35aadadbd185"
+            },
+            "ad3a71b1-f5fa-48e7-81c3-aae3663e1542": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                campId: "3564027f-adcd-4425-b2c0-1253d2386c0c",
+                email: "admin@abv.bg",
+                text: "Campingplatz Lörick is a wonderful spot by the Rhine, offering spacious sites and modern amenities that make it perfect for everyone. I especially appreciated that pets are allowed – it's great if you're traveling with your furry friend. The fishing, swimming, and hiking in the area were fantastic, and the free Wi-Fi and nearby attractions add extra value. I'll definitely be coming back!",
+                _createdOn: 1722782770367,
+                _id: "ad3a71b1-f5fa-48e7-81c3-aae3663e1542"
             }
         },
         records: {
@@ -1653,7 +1669,7 @@
                 city: "Düsseldorf",
                 imageUrl: "https://www.duesselcamp.de/.cm4all/mediadb/Der%20Platz/.3%20Da%20vorne.%20Blick%20nach%20hinten.JPG/picture-1600",
                 info: "Nestled on the picturesque banks of the Rhine, Campingplatz Lörick is the perfect destination for your next outdoor adventure. Our campsite offers a unique blend of nature and amenities, creating an ideal setting for relaxation and fun. With spacious sites for tents and caravans, modern sanitary facilities, and free Wi-Fi, we ensure a comfortable and enjoyable stay. Campingplatz Lörick is perfect for families, friends, and solo travelers seeking tranquility and a connection with nature. Enjoy a variety of activities such as fishing, swimming, and hiking on the scenic trails nearby. You'll also find numerous attractions in the vicinity, including historical landmarks and cozy restaurants. Campingplatz Lörick - your outdoor haven where every experience is unforgettable. Join us and discover the magic of nature in the heart of the Rhine!",
-                webpage:"https://www.duesselcamp.de/",
+                webpage: "https://www.duesselcamp.de/",
                 beach: true,
                 petFriendly: true,
                 shower: false,
@@ -1666,7 +1682,7 @@
                 city: "Pineda de Mar",
                 imageUrl: "https://lh3.googleusercontent.com/p/AF1QipMcGyiDP1sizSasL0vy1jVJXONw5JYJ8ZrT7fmW=s680-w680-h510-rw",
                 info: "Located on the stunning Mediterranean coastline, Campingplatz Caballo De Mar offers a perfect blend of sun, sea, and relaxation. Our campsite provides an ideal getaway for those seeking the charm of the beach combined with the comforts of a well-equipped campground. Our spacious camping sites accommodate both tents and caravans, complemented by modern amenities including clean sanitary facilities, a refreshing swimming pool, and free Wi-Fi. Campingplatz Caballo De Mar is a favorite among families, couples, and solo adventurers looking to soak up the coastal atmosphere. Indulge in a wide range of activities such as beach volleyball, kayaking, and cycling along the scenic coastal routes. The surrounding area boasts vibrant local markets, exquisite dining options, and cultural attractions, ensuring that your stay is as enriching as it is relaxing. Campingplatz Caballo De Mar - where the beauty of the Mediterranean meets unparalleled comfort and adventure. Come and experience the ultimate beachside retreat with us!",
-                webpage:"https://www.caballodemar.com/",
+                webpage: "https://www.caballodemar.com/",
                 beach: false,
                 petFriendly: false,
                 shower: true,
@@ -1679,7 +1695,7 @@
                 city: "Sant Pere Pescador",
                 imageUrl: "https://www.camp-lighthouse.hr/wp-content/uploads/2019/12/lighthouse_camping_savudrija_view.jpg",
                 info: "Set along the beautiful Costa Brava, Camping La Ballena Alegre offers a perfect escape to the Mediterranean coast. The campsite features well-maintained pitches for tents and caravans, modern amenities, and a variety of leisure activities. Guests can enjoy windsurfing, beach volleyball, and yoga classes, or simply relax by our large swimming pool. With its vibrant atmosphere and top-notch facilities, Camping La Ballena Alegre is a favorite among families and adventure seekers alike. Explore the local markets, savor delicious Spanish cuisine, and create unforgettable memories at our coastal haven.",
-                webpage:"https://www.ballena-alegre.com/",
+                webpage: "https://www.ballena-alegre.com/",
                 beach: true,
                 petFriendly: false,
                 shower: true,
@@ -1692,7 +1708,7 @@
                 city: "Argelès-sur-Mer",
                 imageUrl: "https://www.camp-lighthouse.hr/wp-content/uploads/2019/12/lighthouse_camping_parcel.jpg",
                 info: "Perched on the rocky cliffs of the Mediterranean, Camping Les Criques de Porteils offers stunning sea views and direct access to secluded beaches. The campsite provides a peaceful retreat with modern amenities, including clean sanitary facilities, a heated swimming pool, and a fitness center. Ideal for nature lovers and water sports enthusiasts, guests can enjoy snorkeling, kayaking, and hiking along the scenic coastal trails. With its breathtaking landscape and serene environment, Camping Les Criques de Porteils promises a memorable and rejuvenating stay on the French Riviera.",
-                webpage:"https://www.lescriques.de",
+                webpage: "https://www.lescriques.de",
                 beach: false,
                 petFriendly: true,
                 shower: false,
@@ -1710,8 +1726,8 @@
                 petFriendly: true,
                 shower: true,
                 wifi: true
-              },
-              "f1b3e9f6-5c3a-40d4-a5b3-49b9d2179b10": {
+            },
+            "f1b3e9f6-5c3a-40d4-a5b3-49b9d2179b10": {
                 _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
                 title: "Mountain View Campground",
                 country: "Canada",
@@ -1723,8 +1739,8 @@
                 petFriendly: false,
                 shower: true,
                 wifi: false
-              },
-              "e2b9b1f0-9d7e-4b4f-a689-423c6229f3b6": {
+            },
+            "e2b9b1f0-9d7e-4b4f-a689-423c6229f3b6": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 title: "Lakeside Campground",
                 country: "Australia",
@@ -1736,8 +1752,8 @@
                 petFriendly: true,
                 shower: true,
                 wifi: true
-              },
-              "c29d3e16-fd92-4d9d-b431-5b8ed7fc8c95": {
+            },
+            "c29d3e16-fd92-4d9d-b431-5b8ed7fc8c95": {
                 _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
                 title: "Forest Retreat Campground",
                 country: "New Zealand",
@@ -1749,7 +1765,7 @@
                 petFriendly: false,
                 shower: true,
                 wifi: false
-              }
+            }
         },
     };
     var rules$1 = {
