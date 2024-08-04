@@ -1,3 +1,8 @@
+.catalogContainer a{
+    text-decoration: none;
+    color: black;
+}
+
 .catalogContainer .catalogItem {
     background: rgba(255, 255, 255, 0);
     font-size: 24px;

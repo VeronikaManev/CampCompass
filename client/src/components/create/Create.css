@@ -71,7 +71,7 @@
 }
 
 .createContainer .form input::placeholder {
-    color: rgb(4, 4, 4);
+    color: rgba(4, 4, 4, 0.467);
 }
 
 .createContainer .form .fielset {
