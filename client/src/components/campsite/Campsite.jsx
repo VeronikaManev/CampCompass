@@ -126,7 +126,7 @@ export function Campsite() {
             }
         }
         currentCamp();
-    }, [id]);
+    }, []);
 
 
     const isOwner = authData?._id === currentCamp._ownerId;

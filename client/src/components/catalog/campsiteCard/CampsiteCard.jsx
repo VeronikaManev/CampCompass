@@ -24,7 +24,7 @@ export function CampsiteCard(props) {
 
                 <div className="itemMoreContainer">
 
-                    <div className="facilitiesContainer">
+                    <div className="amenitiesContainer">
                         {campsite.beach && <li> <i className="fas fa-umbrella-beach"></i></li>}
                         {campsite.petFriendly && <li><i className="fas fa-paw"></i></li>}
                         {campsite.shower && <li><i className="fas fa-shower"></i></li>}
