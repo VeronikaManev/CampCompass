@@ -4,7 +4,7 @@ import { get, post, put, del } from "./api.js";
 const endpoints = {
     catalog: '/data/camps', 
     byId: '/data/camps', 
-    like: '/data/useful', 
+    like: '/data/likes', 
     comments: '/data/comments',
 }
 
@@ -37,14 +37,13 @@ export async function likeUnit(data) {
     return post(endpoints.like, data);
 }
 
-export async function getLikesCount(characterId) {
-    return get(`/data/useful?where=characterId%3D%22${characterId}%22&distinct=_ownerId&count`);  //TODO current url
+export async function getLikesCount(campId) {
+    return get(`/data/likes?where=campId%3D%22${campId}%22&distinct=_ownerId&count`);
 }
 
-export async function isAlreadyLiked(characterId, userId) {
-    return get(`/data/useful?where=characterId%3D%22${characterId}%22%20and%20_ownerId%3D%22${userId}%22&count`);  //TODO current url
+export async function isAlreadyLiked(campId, userId) {
+    return get(`/data/likes?where=campId%3D%22${campId}%22%20AND%20_ownerId%3D%22${userId}%22`);
 }
-
 
 
 //Comments

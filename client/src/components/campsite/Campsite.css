@@ -71,9 +71,10 @@
     object-fit: cover;
 }
 
-.campsiteContainer .infoContainer{
+.campsiteContainer .infoContainer {
     display: flex;
     flex-direction: column;
+    align-items: center
 }
 
 .campsiteContainer .infoContainer p {
@@ -91,10 +92,11 @@
     list-style-type: none;
 }
 
-.campsiteContainer .corrections{
-    margin-top: 80px;
+.campsiteContainer .corrections {
+    margin-top: 30px;
     display: flex;
     justify-content: space-around;
+    gap: 10px;
 }
 
 .campsiteContainer .corrections button {
@@ -104,6 +106,39 @@
     border-radius: 50%;
     font-size: 30px;
     background-color: #2179c500;
+}
+
+.campsiteContainer .likesContainer{
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    height: 80px;
+    text-align: center;
+}
+
+.campsiteContainer .likes {
+    border: 3px solid black;
+    width: 150px;
+    height: 80px;
+    border-radius: 50px;
+    font-size: 30px;
+    background-color: #2179c500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 40px; */
+}
+
+.campsiteContainer .likeBtn {
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: #2179c500;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .campsiteContainer .article {
