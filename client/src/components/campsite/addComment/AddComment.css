@@ -11,6 +11,7 @@
     background-color: rgba(0, 0, 255, 0);
     border: none;
     border-bottom: 1px solid black;
+    padding-left: 16px;
 }
 
 .addCommentContainer .form input::placeholder {
