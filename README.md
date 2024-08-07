@@ -1,6 +1,6 @@
 # CampCompass
 
-CampCompass is a web application for discovering and sharing campgrounds around the world. Users can search for, view, and add new campgrounds, as well as leave reviews.
+CampCompass is a web application for discovering and sharing campgrounds around the world. Users can search for, view, and add new campgrounds, as well as leave reviews and like campgrounds.
 
 ## Educational Project
 
@@ -14,11 +14,13 @@ This project is an educational assignment developed with React. It adheres to sp
 ## Features
 
 - View a list of campsites
-- View details of each campsite
+- View details of each campsite, including location, amenities, and description
 - Create new campsites (Only logged-in users can add new campsites)
 - Edit existing campsites (Only the author of a campsite can edit it)
 - Delete campsites (Only the author of a campsite can delete it)
 - Leave comments on campsites (Only logged-in users can leave comments)
+- Like campsites (Only logged-in users can like a campsite)
+- Real-time like count update for each campsite
 
 ## Technologies
 
